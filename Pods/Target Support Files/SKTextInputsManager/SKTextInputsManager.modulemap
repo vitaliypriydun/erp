@@ -1,0 +1,6 @@
+framework module SKTextInputsManager {
+  umbrella header "SKTextInputsManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

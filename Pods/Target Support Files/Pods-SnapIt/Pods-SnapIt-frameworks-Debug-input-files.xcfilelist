@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-SnapIt/Pods-SnapIt-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/SKTextInputsManager/SKTextInputsManager.framework
+${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework

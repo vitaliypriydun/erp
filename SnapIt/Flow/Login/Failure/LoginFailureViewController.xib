@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TrendSans-One.otf">
+            <string>TrendSansOne</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginFailureViewController">
+            <connections>
+                <outlet property="applicationNameLabel" destination="YpS-fr-5Dc" id="LKG-3X-QgA"/>
+                <outlet property="messageLabel" destination="WAO-Qh-kry" id="X0j-x8-rdU"/>
+                <outlet property="titleLabel" destination="yBM-xN-Bpd" id="zhI-b5-TWG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_background" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-cu-biS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HYPR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpS-fr-5Dc">
+                    <rect key="frame" x="182.66666666666666" y="83" width="48.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" name="TrendSansOne" family="Trend Sans" pointSize="18"/>
+                    <color key="textColor" name="white"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Rejected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yBM-xN-Bpd">
+                    <rect key="frame" x="26" y="588.66666666666663" width="362" height="36"/>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                    <color key="textColor" name="white"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unfortunately your membership application has been rejected and we are unable to grant you access to the platform. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-Qh-kry">
+                    <rect key="frame" x="30" y="642.66666666666663" width="354" height="65.666666666666629"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                    <color key="textColor" name="white"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-1n-6Dd">
+                    <rect key="frame" x="364" y="64" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="6sW-fH-6dd"/>
+                        <constraint firstAttribute="height" constant="50" id="gID-G7-rFz"/>
+                    </constraints>
+                    <state key="normal" image="button_close_white"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="black"/>
+            <constraints>
+                <constraint firstItem="fwJ-ZV-ZKT" firstAttribute="trailing" secondItem="uBk-1n-6Dd" secondAttribute="trailing" id="1Pm-7f-E2J"/>
+                <constraint firstItem="b1g-cu-biS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DIl-BH-Eaj"/>
+                <constraint firstItem="WAO-Qh-kry" firstAttribute="top" secondItem="yBM-xN-Bpd" secondAttribute="bottom" constant="18" id="GyU-eT-C8F"/>
+                <constraint firstItem="yBM-xN-Bpd" firstAttribute="leading" secondItem="fwJ-ZV-ZKT" secondAttribute="leading" constant="26" id="Whb-LC-d9L"/>
+                <constraint firstItem="fwJ-ZV-ZKT" firstAttribute="trailing" secondItem="yBM-xN-Bpd" secondAttribute="trailing" constant="26" id="Xog-Go-aBJ"/>
+                <constraint firstItem="YpS-fr-5Dc" firstAttribute="centerX" secondItem="fwJ-ZV-ZKT" secondAttribute="centerX" id="aGd-u7-w2e"/>
+                <constraint firstAttribute="bottom" secondItem="b1g-cu-biS" secondAttribute="bottom" id="aSf-jM-DPy"/>
+                <constraint firstItem="YpS-fr-5Dc" firstAttribute="top" secondItem="fwJ-ZV-ZKT" secondAttribute="top" constant="39" id="elo-rE-ywG"/>
+                <constraint firstItem="uBk-1n-6Dd" firstAttribute="top" secondItem="fwJ-ZV-ZKT" secondAttribute="top" constant="20" id="i7m-Bg-3UB"/>
+                <constraint firstItem="fwJ-ZV-ZKT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WAO-Qh-kry" secondAttribute="bottom" constant="20" id="ite-nv-EWq"/>
+                <constraint firstItem="b1g-cu-biS" firstAttribute="trailing" secondItem="fwJ-ZV-ZKT" secondAttribute="trailing" id="mtm-kJ-gZh"/>
+                <constraint firstItem="b1g-cu-biS" firstAttribute="leading" secondItem="fwJ-ZV-ZKT" secondAttribute="leading" id="no3-B3-Uif"/>
+                <constraint firstItem="fwJ-ZV-ZKT" firstAttribute="trailing" secondItem="WAO-Qh-kry" secondAttribute="trailing" constant="30" id="rv1-3n-Jva"/>
+                <constraint firstItem="WAO-Qh-kry" firstAttribute="leading" secondItem="fwJ-ZV-ZKT" secondAttribute="leading" constant="30" id="scq-Rv-ESR"/>
+                <constraint firstItem="yBM-xN-Bpd" firstAttribute="centerY" secondItem="b1g-cu-biS" secondAttribute="centerY" multiplier="363/268" id="udk-wA-M32"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fwJ-ZV-ZKT"/>
+            <point key="canvasLocation" x="137.68115942028987" y="154.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_close_white" width="19" height="19"/>
+        <image name="onboarding_background" width="375" height="667"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_SnapIt {
+  umbrella header "Pods-SnapIt-umbrella.h"
+
+  export *
+  module * { export * }
+}

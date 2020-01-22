@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.9.1)
+  - ObjectMapper (3.5.1)
+  - SKTextInputsManager (0.1.3)
+  - SwiftGen (6.1.0)
+  - SwiftKeychainWrapper (3.4.0)
+  - SwiftLint (0.38.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - ObjectMapper
+  - SKTextInputsManager
+  - SwiftGen
+  - SwiftKeychainWrapper
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ObjectMapper
+    - SKTextInputsManager
+    - SwiftGen
+    - SwiftKeychainWrapper
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SKTextInputsManager: a431d8011cd81492a582198e4fbeaf9ed57fd4e1
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+
+PODFILE CHECKSUM: 7129d3295c04b143d6a882bd19426a76baeda10d
+
+COCOAPODS: 1.8.4
