@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SnapIt.xcodeproj">
+      location = "group:/Users/vpriydun/Documents/Projects/TAS_ERP/ERP.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

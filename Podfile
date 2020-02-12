@@ -6,9 +6,14 @@ target 'SnapIt' do
     # MARK: - Common
 
     pod 'Alamofire'
+    pod 'Starscream'
     pod 'ObjectMapper'
     pod 'SwiftKeychainWrapper'
     pod 'SKTextInputsManager'
+    pod 'SDWebImage'
+		
+		# MARK: - Utils
+		
     pod 'SwiftLint'
     pod 'SwiftGen'
 

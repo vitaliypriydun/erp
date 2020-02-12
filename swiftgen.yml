@@ -1,0 +1,20 @@
+xcassets:
+  inputs:
+    - SnapIt/Resources/Assets.xcassets
+    - SnapIt/Resources/Colors.xcassets
+  outputs:
+    templateName: swift4
+    output: SnapIt/Generated/Assets.swift
+fonts:
+  inputs:
+    - SnapIt/Resources/Fonts
+  outputs:
+    templateName: swift4
+    output: SnapIt/Generated/Fonts.swift
+strings:
+  inputs: SnapIt/Resources/Base.lproj/Localizable.strings
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: SnapIt/Generated/Localization.swift
+      params: {enumName: Localization}

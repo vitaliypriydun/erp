@@ -1,6 +1,6 @@
 //
 //  UIButton+Disable.swift
-//  HYPR
+//  TAS_ERP
 //
 //  Created by vitalii on 5/24/19.
 //  Copyright © 2019 tas. All rights reserved.

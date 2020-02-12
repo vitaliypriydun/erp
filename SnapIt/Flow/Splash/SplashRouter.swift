@@ -10,11 +10,12 @@ import UIKit
 
 protocol SplashRouterProtocol: class {
     
+	func showLogin()
 }
 
 class SplashRouter {
     
-    private weak var viewController: UIViewController?
+    internal weak var viewController: UIViewController?
     
     // MARK: - Lifecycle
     
@@ -27,4 +28,7 @@ class SplashRouter {
 
 extension SplashRouter: SplashRouterProtocol {
     
+	func showLogin() {
+		viewController?.view.window?.fade(to: ModulesFactory.shared.makeLoginModule().interface)
+	}
 }

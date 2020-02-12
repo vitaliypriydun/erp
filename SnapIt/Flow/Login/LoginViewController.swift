@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  HYPR
+//  TAS_ERP
 //
 //  Created by vitalii on 5/10/19.
 //  Copyright © 2019 tas. All rights reserved.
@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     
     // MARK: - Private
     
-    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginLabel: UILabel!
@@ -60,14 +59,10 @@ class LoginViewController: UIViewController {
     // MARK: - Private
     
     private func setupTexts() {
-        titleLabel.text = Localization.App.title
         emailTextField.placeholder = Localization.Login.email
-
         passwordTextField.placeholder = Localization.Login.password
-
         loginButton.setTitle(Localization.Buttons.logIn, for: .normal)
     }
-
 }
 
 // MARK: - LoginInterface
@@ -75,9 +70,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginInterface {
     
     func setLoginButtonEnabled(_ enabled: Bool) {
-        let backgroundColor = enabled ? Asset.Colors.black.color : Asset.Colors.white.color
-        let titleColor = enabled ? Asset.Colors.white.color : Asset.Colors.grey155.color
-        let borderColor = enabled ? UIColor.clear : Asset.Colors.grey155.color
+        let backgroundColor = UIColor.white //TODO: enabled ? Asset.Colors.black.color : Asset.Colors.white.color
+        let titleColor = UIColor.white //TODO: enabled ? Asset.Colors.white.color : Asset.Colors.grey155.color
+        let borderColor = UIColor.white //TODO: enabled ? UIColor.clear : Asset.Colors.grey155.color
         loginButton.backgroundColor = backgroundColor
         loginButton.setTitleColor(titleColor, for: .normal)
         loginButton.borderColor = borderColor

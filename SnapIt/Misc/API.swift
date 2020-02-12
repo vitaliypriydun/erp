@@ -18,8 +18,8 @@ struct API {
         #endif
     }
         
-
     static var host: String { return API.protocol + environment.host }
+    static var socketUrl: String { return API.socketProtocol + environment.host }
         
     // MARK: - Endpoints
 
@@ -78,10 +78,11 @@ extension API {
     private static var role: String { return "customer" }
     private static var format: String { return ".json" }
     private static var `protocol`: String { return "https://" }
+    private static var socketProtocol: String { return "wss://" }
 
-    private static let developmentUrl = "devhypr.snapit.com"
+    private static let developmentUrl = "devTAS_ERP.snapit.com"
     private static let productionUrl = "snapit.com"
-    private static let stageUrl = "stagehypr.snapit.com"
+    private static let stageUrl = "stageTAS_ERP.snapit.com"
 
     static var reachabilityHost: String { return "www.apple.com" }
 }

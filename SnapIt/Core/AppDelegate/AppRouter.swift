@@ -19,8 +19,7 @@ class AppRouter {
     // MARK: - Public
 	
     func startApplication() {
-        let splashModule = ModulesFactory.shared.makeSplashModule()
-        window?.rootViewController = splashModule.interface
         window?.makeKeyAndVisible()
+		window?.rootViewController = ModulesFactory.shared.makeSplashModule().interface
     }
 }

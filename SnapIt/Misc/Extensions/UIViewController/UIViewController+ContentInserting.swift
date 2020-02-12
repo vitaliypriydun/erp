@@ -9,19 +9,22 @@
 import UIKit
 
 extension UIViewController {
+	
+	// TODO: Customize assets and colors
+	
 
     func addTopRightButton(target: UIViewController?, selector: Selector?, title: String, style: UIBarButtonItem.Style = .plain) {
         let button = UIBarButtonItem(title: title, style: style, target: target, action: selector)
-        let attributes = [NSAttributedString.Key.foregroundColor: Asset.Colors.grey155.color,
-                          NSAttributedString.Key.font: FontFamily.AvenirLTStd._65Medium.font(size: 16) ?? Font.systemFont(ofSize: 16)]
+		let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, //Asset.Colors.grey155.color,
+                          NSAttributedString.Key.font: Font.systemFont(ofSize: 16)]
         button.setTitleTextAttributes(attributes, for: .normal)
         navigationItem.rightBarButtonItem = button
     }
 
     func addTopLeftButton(target: UIViewController?, selector: Selector?, title: String, style: UIBarButtonItem.Style = .plain) {
         let button = UIBarButtonItem(title: title, style: style, target: target, action: selector)
-        let attributes = [NSAttributedString.Key.foregroundColor: Asset.Colors.grey155.color,
-                          NSAttributedString.Key.font: FontFamily.AvenirLTStd._65Medium.font(size: 16) ?? Font.systemFont(ofSize: 16)]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, // TODO: Asset.Colors.grey155.color,
+                          NSAttributedString.Key.font: Font.systemFont(ofSize: 16)]
         button.setTitleTextAttributes(attributes, for: .normal)
         navigationItem.leftBarButtonItem = button
     }

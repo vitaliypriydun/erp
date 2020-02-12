@@ -10,18 +10,26 @@ import UIKit
 import Foundation
 
 class ServicesFactory {
+	
+	private lazy var socketService = ServicesFactory.shared.makeSocketService()
+	
     // MARK: - Singleton
     
     static let shared: ServicesFactory = ServicesFactory()
     private init() {}
     
     // MARK: - Public
+	
     func makeAuthorizationService() -> AuthorizationServiceProtocol {
         return AuthorizationService(networkService: makeAuthorizedNetworkService(),
                                     keychainService: makeKeychainService())
     }
     
     // MARK: - Private
+	
+	private func makeSocketService() -> SocketServiceProtocol {
+		return SocketService(keychainService: makeKeychainService())
+	}
     
     private func makeNetworkService() -> Networking {
         return NetworkService(errorParser: makeAPIErrorParser())
@@ -46,7 +54,9 @@ class ServicesFactory {
 	}
 	
 	private func makeTokenProvider() -> TokenProviderProtocol {
-		return TokenProvider(keychainService: makeKeychainService(), networkingService: makeNetworkService())
+		return TokenProvider(keychainService: makeKeychainService(),
+							 networkingService: makeNetworkService(),
+							 socketService: socketService)
 	}
 	
 	private func makeAuthorizationStateRouter() -> AuthorizationStateRouterProtocol {

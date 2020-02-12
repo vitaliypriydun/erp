@@ -12,7 +12,7 @@ protocol SplashInterface: class {
     
 }
 
-protocol SplashOutput {
+protocol SplashOutput: ViewLifecycle {
     
 }
 
@@ -33,4 +33,8 @@ class SplashPresenter: NSObject {
 
 extension SplashPresenter: SplashOutput {
 
+	func viewDidAppear() {
+		// TODO: Auto auth
+		router.showLogin()
+	}
 }

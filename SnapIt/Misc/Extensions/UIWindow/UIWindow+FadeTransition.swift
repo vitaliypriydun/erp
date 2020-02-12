@@ -1,6 +1,6 @@
 //
 //  UIWindow+FadeTransition.swift
-//  HYPR
+//  TAS_ERP
 //
 //  Created by Vitaliy Priydun on 9/24/19.
 //  Copyright © 2019 tas. All rights reserved.
