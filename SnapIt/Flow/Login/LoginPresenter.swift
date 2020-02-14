@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginInterface: class {
+protocol LoginInterface: class, AppearAnimatableView {
 
     func startLoadingAnimation()
     func endLoadingAnimation()
@@ -17,7 +17,7 @@ protocol LoginInterface: class {
     func startEditingEmail()
 }
 
-protocol LoginOutput: ViewLifecycle {
+protocol LoginOutput: ViewLifecycle, AppearAnimatablePresenter {
 
     func viewTriggeredLoginEvent(with email: String, password: String)
     func viewTriggeredForgotPasswordEvent()
@@ -31,6 +31,8 @@ class LoginPresenter {
     private let router: LoginRoutable
     private let authService: AuthorizationServiceProtocol
 
+    internal var appearenceDirection: SlideDirection?
+    
     init(with view: LoginInterface, _ router: LoginRoutable,
          _ authService: AuthorizationServiceProtocol) {
         self.view = view
@@ -48,7 +50,11 @@ class LoginPresenter {
 // MARK: - LoginOutput
     
 extension LoginPresenter: LoginOutput {
-
+    
+    var animatableView: AppearAnimatableView? {
+        return view
+    }
+    
     func viewTriggeredLoginEvent(with email: String, password: String) {
         guard let email = Email(email) else {
             view?.showEmailIsInvalid()

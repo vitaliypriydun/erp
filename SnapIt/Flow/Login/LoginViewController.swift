@@ -29,10 +29,11 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var orLabel: UILabel!
     @IBOutlet private weak var emailView: UIView!
     @IBOutlet private weak var passwordView: UIView!
-    @IBOutlet private var textInputsManager: TextInputsManager!
-    
+    @IBOutlet private weak var orView: UIView!
+    @IBOutlet private weak var googleView: UIView!
     @IBOutlet private weak var loginActiveConstraint: NSLayoutConstraint!
     @IBOutlet private weak var loginLoadingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var textInputsManager: TextInputsManager!
 
     // MARK: - Lifecycle
     
@@ -41,15 +42,15 @@ class LoginViewController: UIViewController {
         presenter?.viewDidLoad()
         setupTexts()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter?.viewDidAppear()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        presenter?.viewDidDisappear()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.viewWillDisappear()
     }
     
     override func viewDidLayoutSubviews() {
@@ -103,6 +104,10 @@ class LoginViewController: UIViewController {
 // MARK: - LoginInterface
     
 extension LoginViewController: LoginInterface {
+    
+    var animatableViews: [UIView] {
+        return [loginLabel, emailView, passwordView, forgotPasswordButton, loginButton, orView, googleView]
+    }
     
     func setLoginButtonEnabled(_ enabled: Bool) {
         loginButton.isUserInteractionEnabled = enabled

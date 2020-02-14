@@ -28,11 +28,13 @@
                 <outlet property="emailView" destination="o0h-sp-Ug8" id="fTe-da-13N"/>
                 <outlet property="forgotPasswordButton" destination="K41-3D-okK" id="3ga-de-Pz0"/>
                 <outlet property="googleButton" destination="4rA-HG-CVJ" id="zT0-R8-67b"/>
+                <outlet property="googleView" destination="IWt-OU-CGI" id="My3-S4-9NH"/>
                 <outlet property="loginActiveConstraint" destination="Dwl-eg-dcy" id="EyM-G2-vlo"/>
                 <outlet property="loginButton" destination="8HC-0M-pDr" id="4ix-7j-yTf"/>
                 <outlet property="loginLabel" destination="PdQ-2d-jue" id="LUj-dm-r8B"/>
                 <outlet property="loginLoadingConstraint" destination="NYH-GZ-epr" id="zLd-8S-8pY"/>
                 <outlet property="orLabel" destination="Z18-1Q-zXe" id="wiP-xN-ux2"/>
+                <outlet property="orView" destination="8Sh-T1-DkT" id="Nki-iM-5Mo"/>
                 <outlet property="passwordTextField" destination="maP-qn-YTG" id="pS7-uf-5oJ"/>
                 <outlet property="passwordView" destination="kDs-RS-lrd" id="EyK-md-Ndt"/>
                 <outlet property="textInputsManager" destination="LNu-C6-Bxj" id="f9p-gK-JH2"/>
@@ -348,59 +350,70 @@
                                         <constraint firstAttribute="height" constant="30" id="kSo-iL-ebe"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rA-HG-CVJ">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWt-OU-CGI">
                                     <rect key="frame" x="0.0" y="458" width="374" height="50"/>
-                                    <color key="backgroundColor" name="white"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rA-HG-CVJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <color key="backgroundColor" name="white"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Ttx-mh-ChM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
+                                            <state key="normal" title="Login with Google ">
+                                                <color key="titleColor" name="black"/>
+                                                <color key="titleShadowColor" name="black"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.29999999999999999"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="2" height="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" name="black"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="loginWithGoogleAction:" destination="-1" eventType="touchUpInside" id="YVR-z6-bq5"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_google" translatesAutoresizingMaskIntoConstraints="NO" id="Yhx-yP-T2X">
+                                            <rect key="frame" x="12" y="10" width="88" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="NAT-Ew-cPR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="Ttx-mh-ChM"/>
+                                        <constraint firstAttribute="bottom" secondItem="4rA-HG-CVJ" secondAttribute="bottom" id="PRh-b3-Kvj"/>
+                                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="centerY" secondItem="4rA-HG-CVJ" secondAttribute="centerY" id="fNG-RI-hC3"/>
+                                        <constraint firstItem="4rA-HG-CVJ" firstAttribute="leading" secondItem="IWt-OU-CGI" secondAttribute="leading" id="lkW-bK-nYg"/>
+                                        <constraint firstItem="4rA-HG-CVJ" firstAttribute="top" secondItem="IWt-OU-CGI" secondAttribute="top" id="mHJ-iy-VZf"/>
+                                        <constraint firstAttribute="trailing" secondItem="4rA-HG-CVJ" secondAttribute="trailing" id="mbo-EU-DZx"/>
+                                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="leading" secondItem="4rA-HG-CVJ" secondAttribute="leading" constant="12" id="xFN-cM-fVg"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
-                                    <state key="normal" title="Login with Google ">
-                                        <color key="titleColor" name="black"/>
-                                        <color key="titleShadowColor" name="black"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                            <real key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                            <real key="value" value="0.29999999999999999"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                            <size key="value" width="2" height="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                            <color key="value" name="black"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="jhE-aV-5xw"/>
-                                        <action selector="loginWithGoogleAction:" destination="-1" eventType="touchUpInside" id="YVR-z6-bq5"/>
-                                    </connections>
-                                </button>
+                                </view>
                             </subviews>
                         </stackView>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7RI-3C-GEC">
                             <rect key="frame" x="197" y="425" width="20" height="20"/>
                             <color key="color" name="white"/>
                         </activityIndicatorView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_google" translatesAutoresizingMaskIntoConstraints="NO" id="Yhx-yP-T2X">
-                            <rect key="frame" x="32" y="548" width="88" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="NAT-Ew-cPR"/>
-                            </constraints>
-                        </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="BDg-8t-fiV" firstAttribute="centerX" secondItem="Ior-Fg-ir3" secondAttribute="centerX" id="30I-RS-z9T"/>
                         <constraint firstItem="7RI-3C-GEC" firstAttribute="centerY" secondItem="8HC-0M-pDr" secondAttribute="centerY" id="D7P-Id-n1G"/>
                         <constraint firstItem="7RI-3C-GEC" firstAttribute="centerX" secondItem="8HC-0M-pDr" secondAttribute="centerX" id="Ljf-II-BKo"/>
-                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="leading" secondItem="4rA-HG-CVJ" secondAttribute="leading" constant="12" id="PKq-OD-WTL"/>
                         <constraint firstAttribute="trailing" secondItem="BDg-8t-fiV" secondAttribute="trailing" constant="20" id="Whu-Yb-UaX"/>
-                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="centerY" secondItem="4rA-HG-CVJ" secondAttribute="centerY" id="kOi-3c-bMF"/>
                         <constraint firstItem="BDg-8t-fiV" firstAttribute="leading" secondItem="Ior-Fg-ir3" secondAttribute="leading" constant="20" id="psi-Jf-Kll"/>
                         <constraint firstItem="BDg-8t-fiV" firstAttribute="top" secondItem="Ior-Fg-ir3" secondAttribute="top" constant="80" id="qpA-9y-jUl"/>
                         <constraint firstAttribute="bottom" secondItem="BDg-8t-fiV" secondAttribute="bottom" priority="200" constant="30" id="uhN-Sr-hH0"/>

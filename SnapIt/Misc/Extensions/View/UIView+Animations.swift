@@ -150,6 +150,18 @@ enum SlideDirection {
     case up
 }
 
+extension SlideDirection {
+    
+    var dismissTransform: CGAffineTransform {
+        switch self {
+        case .left: return Animations.translateLeftTransform
+        case .right: return Animations.translateRightTransform
+        case .bottom: return Animations.translateDownTransform
+        case .up: return Animations.translateUpTransform
+        }
+    }
+}
+
 // MARK: - Constants
 
 private enum Animations {

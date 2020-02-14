@@ -33,16 +33,18 @@ class ModulesFactory {
     func makeLoginModule() -> Module<LoginPresenter, UIViewController> {
         let viewController = LoginViewController()
         let router = LoginRouter(with: viewController)
-        let presenter = LoginPresenter(with: viewController, router, servicesFactory.makeAuthorizationService())
+        var presenter = LoginPresenter(with: viewController, router, servicesFactory.makeAuthorizationService())
         viewController.presenter = presenter
+        presenter.set(appearenceDirection: .left)
         return Module(presenter: presenter, interface: viewController)
     }
     
     func makeRestorePasswordModule() -> Module<ResetPasswordPresenter, UIViewController> {
         let viewController = ResetPasswordViewController()
         let router = ResetPasswordRouter(with: viewController)
-        let presenter = ResetPasswordPresenter(withView: viewController, router: router)
+        var presenter = ResetPasswordPresenter(withView: viewController, router: router)
         viewController.presenter = presenter
+        presenter.set(appearenceDirection: .right)
         return Module(presenter: presenter, interface: viewController)
     }
     

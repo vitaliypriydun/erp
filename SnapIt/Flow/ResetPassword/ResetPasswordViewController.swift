@@ -34,15 +34,15 @@ class ResetPasswordViewController: UIViewController {
         presenter?.viewDidLoad()
         setupTexts()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter?.viewDidAppear()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        presenter?.viewDidDisappear()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.viewWillDisappear()
     }
     
     override func viewDidLayoutSubviews() {
@@ -80,6 +80,10 @@ class ResetPasswordViewController: UIViewController {
 // MARK: - ResetPasswordInterface
 
 extension ResetPasswordViewController: ResetPasswordInterface {
+    
+    var animatableViews: [UIView] {
+        return [titleLabel, subtitleLabel, emailView, restoreButton]
+    }
     
     func startLoading() {
         activityIndicator.startAnimating()

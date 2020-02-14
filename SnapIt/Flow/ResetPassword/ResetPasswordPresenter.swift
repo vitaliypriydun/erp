@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol ResetPasswordInterface: class {
+protocol ResetPasswordInterface: class, AppearAnimatableView {
     
     func startLoading()
     func endLoading()
     func showEmailIsInvalid()
 }
 
-protocol ResetPasswordOutput: ViewLifecycle {
+protocol ResetPasswordOutput: ViewLifecycle, AppearAnimatablePresenter {
     
     func viewTriggeredRestoreEvent(with email: String)
     func viewTriggeredLoginEvent()
@@ -26,6 +26,8 @@ class ResetPasswordPresenter: NSObject {
     private weak var view: ResetPasswordInterface?
     private let router: ResetPasswordRouterProtocol
     
+    internal var appearenceDirection: SlideDirection?
+    
     init(withView view: ResetPasswordInterface, router: ResetPasswordRouterProtocol) {
         self.view = view
         self.router = router
@@ -35,6 +37,10 @@ class ResetPasswordPresenter: NSObject {
 // MARK: - ResetPasswordOutput
 
 extension ResetPasswordPresenter: ResetPasswordOutput {
+    
+    var animatableView: AppearAnimatableView? {
+        return view
+    }
     
     func viewTriggeredRestoreEvent(with email: String) {
         guard let email = Email(email) else {
