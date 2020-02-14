@@ -12,8 +12,8 @@ extension UIView {
 
     // MARK: - Animations
     
-    static func animate(_ animations: @escaping () -> Void, completion: ((Bool) -> Void)? = nil) {
-        UIView.animate(withDuration: Animations.fadeDuration,
+    static func animate(_ animations: @escaping () -> Void, duration: TimeInterval = Animations.fadeDuration, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: duration,
                        delay: 0.0,
                        usingSpringWithDamping: Animations.damping,
                        initialSpringVelocity: Animations.initialVelocity,

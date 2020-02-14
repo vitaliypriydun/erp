@@ -63,6 +63,10 @@ class ResetPasswordViewController: UIViewController {
         presenter?.viewTriggeredLoginEvent()
     }
     
+    @IBAction func emailAction(_ sender: Any) {
+        emailTextField.becomeFirstResponder()
+    }
+    
     // MARK: - Private
     
     private func setupTexts() {

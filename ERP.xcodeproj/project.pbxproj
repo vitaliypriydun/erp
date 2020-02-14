@@ -11,6 +11,7 @@
 		5E3F863A23F55D400044C587 /* AttributedTextFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F863923F55D400044C587 /* AttributedTextFactory.swift */; };
 		5E3F863C23F572050044C587 /* GradientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F863B23F572050044C587 /* GradientFactory.swift */; };
 		5E3F863E23F595D20044C587 /* LogoutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F863D23F595D20044C587 /* LogoutRouter.swift */; };
+		5E3F864123F6E9AD0044C587 /* AppearAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F864023F6E9AD0044C587 /* AppearAnimatable.swift */; };
 		5E4DF81E23F43F8E001BA78F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF80123F43F8E001BA78F /* Colors.xcassets */; };
 		5E4DF81F23F43F8E001BA78F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF80223F43F8E001BA78F /* Localizable.strings */; };
 		5E4DF82023F43F8E001BA78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF80423F43F8E001BA78F /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		5E3F863923F55D400044C587 /* AttributedTextFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextFactory.swift; sourceTree = "<group>"; };
 		5E3F863B23F572050044C587 /* GradientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFactory.swift; sourceTree = "<group>"; };
 		5E3F863D23F595D20044C587 /* LogoutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRouter.swift; sourceTree = "<group>"; };
+		5E3F864023F6E9AD0044C587 /* AppearAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearAnimatable.swift; sourceTree = "<group>"; };
 		5E4DF80123F43F8E001BA78F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5E4DF80323F43F8E001BA78F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E4DF80423F43F8E001BA78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +234,14 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		5E3F863F23F6E9960044C587 /* AppearAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				5E3F864023F6E9AD0044C587 /* AppearAnimatable.swift */,
+			);
+			path = AppearAnimations;
+			sourceTree = "<group>";
+		};
 		5E4DF80023F43F8E001BA78F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +353,7 @@
 		5EAABDE823D5D31B00AA3720 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F863F23F6E9960044C587 /* AppearAnimations */,
 				5EEA7AEC23D8A1F400B4C73A /* Routers */,
 				5EAABE2A23D60B8C00AA3720 /* Cells */,
 				5EEA7AF223D8A1F400B4C73A /* Identifiable.swift */,
@@ -909,6 +920,7 @@
 				5EEA7ABF23D8814900B4C73A /* APIErrorParser.swift in Sources */,
 				5EAABE2723D609F200AA3720 /* Date+StringDescription.swift in Sources */,
 				5EAABE0823D6088D00AA3720 /* Assets.swift in Sources */,
+				5E3F864123F6E9AD0044C587 /* AppearAnimatable.swift in Sources */,
 				5E3F863C23F572050044C587 /* GradientFactory.swift in Sources */,
 				5EAABE3323D60B8C00AA3720 /* ReusableCell.swift in Sources */,
 				5EEA7B0A23D9A5D000B4C73A /* ResetPasswordViewController.swift in Sources */,
@@ -1119,7 +1131,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tas.erp;
 				PRODUCT_NAME = "TAS ERP";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1142,7 +1154,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tas.erp;
 				PRODUCT_NAME = "TAS ERP";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

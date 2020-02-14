@@ -24,14 +24,17 @@ extension UIWindow {
     }
     
     func slide(to viewController: UIViewController, direction: SlideDirection) {
-        guard let snapshot = rootViewController?.view.snapshotView(afterScreenUpdates: true), let newView = viewController.view else { return }
+        guard let snapshot = rootViewController?.view.snapshotView(afterScreenUpdates: true),
+            let newView = viewController.view else {
+                return
+        }
         rootViewController = viewController
         snapshot.frame = direction.resultFrame
         newView.addSubview(snapshot)
         newView.frame = direction.originalFrame
-        UIView.animate({ 
+        UIView.animate({
             newView.frame = UIScreen.main.bounds
-        }, completion: { _ in
+        }, duration: direction.transitionDuration, completion: { _ in
             snapshot.removeFromSuperview()
         })
     }
@@ -58,6 +61,13 @@ extension SlideDirection {
     }
     
     var resultFrame: CGRect { return opposite.originalFrame }
+    
+    var transitionDuration: TimeInterval {
+        switch self {
+        case .bottom, .up: return 1.11
+        default: return 0.83
+        }
+    }
 }
 
 private extension CGRect {
