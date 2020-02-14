@@ -19,6 +19,10 @@ extension ClosableRouter {
 
     func close() {
         viewController?.view.endEditing(true)
-        viewController?.dismiss(animated: true, completion: nil)
+        if let navigationController = viewController?.navigationController {
+            navigationController.popViewController(animated: true)
+        } else {
+            viewController?.dismiss(animated: true, completion: nil)
+        }
     }
 }

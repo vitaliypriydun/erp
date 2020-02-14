@@ -67,7 +67,7 @@ extension UIView {
                        animations: { [weak self] in
                         self?.transform = .identity
                         self?.alpha = Defaults.ViewAlpha.visible
-            }, completion: nil)
+        }, completion: nil)
     }
 
     func animatePopUp(after delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil) {
@@ -81,7 +81,7 @@ extension UIView {
                        animations: { [weak self] in
                         self?.transform = .identity
                         self?.alpha = Defaults.ViewAlpha.visible
-            }, completion: nil)
+        }, completion: nil)
     }
 
     func slideIn(from: SlideDirection, after delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil) {
@@ -100,7 +100,7 @@ extension UIView {
                        animations: { [weak self] in
                         self?.transform = .identity
                         self?.alpha = Defaults.ViewAlpha.visible
-            }, completion: nil)
+        }, completion: nil)
     }
 
     func shake(repeatCount: Float = Animations.shakeRepeatCount) {
@@ -108,8 +108,8 @@ extension UIView {
         animation.duration = Animations.shakeDuration
         animation.repeatCount = repeatCount
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: center.x - 10.0, y: center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint(x: center.x + 10.0, y: center.y))
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: center.x - Animations.shakeOffset, y: center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: center.x + Animations.shakeOffset, y: center.y))
         layer.add(animation, forKey: "position")
     }
 
@@ -157,15 +157,13 @@ private enum Animations {
     static var duration: TimeInterval { return 0.5 }
     static var transitionDuration: TimeInterval { return 0.35 }
     static var fadeDuration: TimeInterval { return 0.8 }
-    static var damping: CGFloat { return 0.75 }
-    static var initialVelocity: CGFloat { return 5 }
-    static var shakeDuration: TimeInterval { return 0.07 }
-    static var shakeRepeatCount: Float { return 4 }
+    static var damping: CGFloat { return 0.85 }
+    static var initialVelocity: CGFloat { return 0.5 }
+    static var shakeDuration: TimeInterval { return 0.1 }
+    static var shakeRepeatCount: Float { return 2 }
     static var shakeOffset: CGFloat { return 10.0 }
 
-    static var dismissTransform: CGAffineTransform { return translateDownTransform
-                                                            .concatenating(CGAffineTransform(scaleX: 0, y: 0)) }
-
+    static var dismissTransform: CGAffineTransform { return translateDownTransform.concatenating(CGAffineTransform(scaleX: 0, y: 0)) }
     static var translateDownTransform: CGAffineTransform { return CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.size.height) }
     static var translateLeftTransform: CGAffineTransform { return CGAffineTransform(translationX: -UIScreen.main.bounds.size.width, y: 0) }
     static var translateRightTransform: CGAffineTransform { return CGAffineTransform(translationX: UIScreen.main.bounds.size.width, y: 0) }

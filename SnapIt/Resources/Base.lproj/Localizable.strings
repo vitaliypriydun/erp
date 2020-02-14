@@ -1,193 +1,66 @@
 /*
  Localizable.strings
- HYPR
+ TAS_ERP
 
  Created by vitalii on 5/8/19.
  Copyright © 2019 tas. All rights reserved.
  */
-
-// Time
-"time.minute" = "minute";
-"time.minutes" = "minutes";
-"time.minute_s" = "minute(s)";
-"time.second" = "second";
-"time.seconds" = "seconds";
-"time.second_s" = "second(s)";
-"time.hour" = "hour";
-"time.hour_s" = "hour(s)";
 
 // Common Buttons
 "buttons.ok" = "Ok";
 "buttons.cancel" = "Cancel";
 "buttons.yes" = "Yes";
 "buttons.no" = "No";
-"buttons.log_in" = "Log in";
+
+// Progress buttons
+"buttons.accept" = "Accept";
+"buttons.confirm" = "Confirm";
+"buttons.done" = "Done";
 "buttons.send" = "Send";
+"buttons.continue" = "Continue";
+"buttons.update" = "Update";
+"buttons.updating" = "Updating";
+"buttons.start" = "Start";
+"buttons.end" = "End";
+"buttons.wait" = "Wait";
+
+// Help buttons
+"buttons.help" = "Help";
+"buttons.need_help" = "Need Help?";
 "buttons.go_to_settings" = "Go to Settings";
 "buttons.go_to_faqs" = "Go to FAQs";
 
-// Autocomplete buttons
-"buttons.search" = "Search";
-"buttons.done" = "Done";
-
 // Profile buttons
-"buttons.need_help" = "Need Help?";
-"buttons.continue" = "Continue";
-"buttons.sign_out" = "Sign out";
 "buttons.edit_profile" = "Edit profile";
+"buttons.log_in" = "Log in";
+"buttons.sign_out" = "Sign out";
 
-"buttons.help" = "HELP";
-"buttons.update" = "Update";
-"buttons.updating" = "Updating";
-"buttons.confirm" = "Confirm";
-
-// Pickup flow buttons
+// Other buttons
+"buttons.search" = "Search";
 "buttons.details" = "Details";
-"buttons.pickup" = "Pickup";
-"buttons.accept" = "Accept";
-"buttons.arrived" = "Arrived";
-"buttons.start" = "Start";
-"buttons.end" = "End";
 "buttons.view_all" = "View All";
-
-// Journey buttons
-"buttons.confirm_summon" = "Confirm Summon";
-"buttons.cancel_summon" = "Cancel Summon";
-"buttons.confirm_end" = "Confirm End";
 "buttons.report" = "Report";
-"buttons.update_journey" = "Update Journey";
-"buttons.reject_update" = "Reject Update";
-"buttons.upload_video" = "Upload video";
-"buttons.summon_alternative" = "Summon Alternative";
-"buttons.wait" = "Wait";
-"buttons.continue_summon" = "Continue Summon";
-
-"buttons.get_tickets" = "Get Tickets";
-
-// TabBar
-"tabbar.items.dashboard" = "Dashboard";
-"tabbar.items.bookings" = "Bookings";
-"tabbar.items.account" = "Account";
-
-// Alert buttons
-"alert.buttons.reject_and_report" = "Reject and Report";
-"alert.buttons.cancel" = "Cancel";
-"alert.buttons.lost_property" = "Lost Property";
-"alert.buttons.complaint" = "Complaint";
-"alert.buttons.general_feedback" = "General Feedback";
-
-// Alert titles
-"alert.titles.are_you_sure" = "Are You Sure?";
-"alert.titles.help_with" = "Help with...";
-"alert.titles.internet" = "No Internet Connection";
-"alert.titles.payment_unavailable" = "Error";
-"alert.titles.booked" = "Already booked!";
-"alert.titles.error" = "Error";
-
-// custom
-"alert.titles.booking_best_practices" = "Booking Best Practices";
-"alert.titles.accepting" = "HYPR Has Accepted Your Booking";
-"alert.titles.accepted" = "Driver Accepted Summon";
-"alert.titles.booking_accepted" = "Booking Accepted";
-"alert.titles.rejected" = "Summon Not Accepted";
-"alert.titles.cancelling" = "Cancelling Summon";
-"alert.titles.cancelled" = "Summon Cancelled";
-"alert.titles.updating" = "Updating Journey";
-"alert.titles.updated" = "Journey Updated";
-"alert.titles.update_rejected" = "Driver Cancelled the Update";
-"alert.titles.changing" = "Changing Car";
-"alert.titles.invalid_location" = "Failed to Create a Route";
-"alert.titles.cancelled_by_operator" = "Operator Cancelled the Ride";
-"alert.titles.cancelled_by_driver" = "Driver Cancelled the Ride";
-"alert.titles.completed" = "Journey Completed";
-"alert.titles.payment_failed" = "Payment Failed";
-"alert.titles.payment_timeout" = "Payment Timeout";
-"alert.titles.in_development" = "In Development";
-"alert.titles.car_booked" = "Need More Time For Pickup";
-"alert.titles.update_unavailable" = "Update Journey Unavailable";
-
-// Alert messages
-"alert.messages.reject_summon_message" = "Rejecting a Summon will require a report.";
-"alert.messages.internet" = "Your device has lost connection to the internet";
-"alert.messages.fee_for_cancel" = "\nCancelling your Summon will\nincure a fee ";
-"alert.messages.payment_unavailable" = "Unable to present Apple Pay authorization.";
-"alert.messages.booked" = "\nSomeone has already booked this car on this date. Choose a different date or other car.";
-"alert.messages.empty_error" = "Please type your message";
-"alert.messages.out_of_bounds" = "Selected location is out of bounds. Please choose a place closer to the center.";
-
-// custom
-"alert.messages.booking_best_practices" = "We want you to have the best possible experience. Please visit our Summon FAQ’s for Booking Best Practices.";
-"alert.messages.accepting" = "We are just looking for a driver";
-"alert.messages.accepted" = "Your supercar is on its way";
-"alert.messages.rejected" = "This car is no longer available";
-"alert.messages.cancelling" = "We are just telling the driver";
-"alert.messages.cancelled" = "Your Summon has been cancelled";
-"alert.messages.updating" = "We are just letting the Driver know";
-"alert.messages.updated" = "Your Journey has been updated!";
-"alert.messages.update_rejected" = "Journey update has been cancelled";
-"alert.messages.changing" = "We are just telling the drivers";
-"alert.messages.invalid_location" = "Please specify addresses";
-"alert.messages.cancelled_by_operator" = "Your ride has been cancelled";
-"alert.messages.cancelled_by_driver" = "Your ride has been cancelled";
-"alert.messages.completed" = "Thank You for using HYPR";
-"alert.messages.payment_failed" = "Try again later or with other payment method";
-"alert.messages.payment_timeout" = "Your booking has expired due to payment timeout";
-"alert.messages.in_development" = "Stay tuned!";
-"alert.messages.car_booked" = "Your driver is unable to pick you up at the selected time, please choose a later pickup time";
-"alert.messages.update_unavailable" = "Unfortunately we can not extend your journey due to the driver being unavailable";
 
 // Flow
 // Global
-"app.title" = "HYPR";
-"driver" = "Driver";
+"app.title" = "ERP";
+"app.organization" = "The App Solutions";
+"app.organization_short" = "TAS";
 "apple_pay" = "Apple Pay";
 
-// Onboarding
-"onboarding.title" = "Summon Supercars";
-"onboarding.message" = "CULTURE IN MOTION";
-
 // Login
-"login.email" = "Email";
+"login.title" = "Log In";
+"login.email" = "email";
 "login.password" = "Password";
-"login.failure.titles.rejected" = "Application Rejected";
-"login.failure.titles.frozen" = "Membership Frozen";
-"login.failure.titles.pending" = "Application Pending";
-"login.failure.titles.cancelled" = "Membership Cancelled";
-"login.failure.messages.rejected" = "Unfortunately your membership application has been rejected and we are unable to grant you access to the platform.";
-"login.failure.messages.frozen" = "Your membership has been frozen. To access the platform again, please unfreeze your account via the website.";
-"login.failure.messages.pending" = "Your application is being reviewed at the moment, and so we cannot grant you access to the platform just yet. Please wait for the confirmation email.";
-"login.failure.messages.cancelled" = "Your membership has been cancelled. To access the platform again, please reapply via the website.";
+"login.forgot_password" = "Forgot password?";
+"login.or" = "Or";
+"login.google" = "Continue with Google";
+"login.failure.titles.blocked" = "Account Blocked";
+"login.failure.messages.blocked" = "Your account is blocked. Contact your system administrator";
 
-// Dashboard
-"dashboard.title" = "HYPR";
-"dashboard.can_still_book" = "You can still book by pressing the book icon below";
-"dashboard.sleeping" = "We are currently sleeping";
-"dashboard.all_cars_in_use" = "All cars in use";
-"dashboard.live_cars" = "Live Cars";
-"dashboard.estimated_pickup" = "Estimated Pickup";
-"dashboard.location_services_access_denied" = "Turn on location services";
-"dashboard.location_services_please_enable" = "Allow location data access to view live cars near you";
-
-// Summon
-"summon.title" = "Confirmation";
-"summon.terms" = "By pressing ‘Confirm Summon’, you agree with HYPR Terms & Conditions";
-"summon.update_terms" = "By pressing ‘Confirm Update’, you agree with HYPR Terms & Conditions";
-"summon.pickup_date" = "Pickup Date";
-"summon.summon_pickup" = "Summon Pickup";
-"summon.pickup_location" = "Pickup Location";
-"summon.summon_end" = "Summon End";
-"summon.dropoff_location" = "Dropoff Location";
-"summon.summon_estimation" = "Summon Estimation";
-"summon.paying_with" = "Paying with";
-
-// Listings
-"listings.title" = "Listings";
-"listings.sections.brand" = "BRAND";
-"listings.sections.view_all" = "VIEW ALL";
-"listings.models" = "MODELS";
-
-// Events
-"events.title" = "Events";
+// Restore Password
+"reset_password.title" = "Restore Password";
+"reset_password.subtitle" = "Enter your email used to access ERP";
 
 // Account
 "account.title" = "Account";
@@ -211,83 +84,9 @@
 "account.help.terms" = "Terms and Privacy Policy";
 "account.help.contact_us" = "Contact Us";
 
-"account.my.payment" = "Change Payment Method";
-"account.my.membership" = "Membership";
-
-// Previous Jorneys
-"previous_jorneys.title" = "Journeys";
-"previous_jorneys.supercar" = "Supercar:";
-"previous_jorneys.pickup" = "Pickup:";
-"previous_jorneys.dropoff" = "Dropoff:";
-"previous_jorneys.alert.title" = "Help with ...";
-"previous_jorneys.status" = "Status:";
-"previous_jorneys.stub.previous" = "You have no previous journeys";
-"previous_jorneys.stub.current" = "You have no pre bookings";
-
-// Journey
-"journey.arriving_in" = "Arriving in:";
-"journey.driver_license" = "DRIVER LICENSE: ";
-"journey.arrived" = "Your Supercar Has Arrived";
-"journey.confirm_payment" = "Confirm Payment\n";
-"journey.payment_from_suffix" = " from ";
-
-// Journey Statuses
-"journey.status.pre_booked" = "Pre booked";
-"journey.status.previous" = "Previous";
-"journey.status.new" = "New";
-"journey.status.accepted" = "Accepted";
-"journey.status.picked" = "Pickuped";
-"journey.status.waiting" = "Waiting";
-"journey.status.ongoing" = "Ongoing";
-"journey.status.updating" = "Updating";
-"journey.status.updated" = "Updated";
-"journey.status.completed" = "Completed";
-"journey.status.rejected_by_driver" = "Rejected by Driver";
-"journey.status.rejected" = "Rejected";
-"journey.status.cancelled_by_driver" = "Cancelled by Driver";
-"journey.status.cancelled" = "Cancelled";
-"journey.status.cancelled_by_operator" = "Cancelled by Operator";
-"journey.status.waiting_for_payment" = "Waiting for Payment";
-"journey.status.payment_timeout" = "Payment Timeout";
-"journey.status.payment_failed" = "Payment Failed";
-
-// Report
-"report.title" = "Report";
-"report.status.reject.title" = "Reject Report";
-"report.status.complaint.title" = "Complaint";
-"report.status.complaint.description" = "Please write your complaint.";
-"report.status.lostProperty.title" = "Lost Property";
-"report.status.lostProperty.description" = "Please describe what you have lost.";
-"report.status.feedback.title" = "General Feedback";
-"report.status.feedback.title" = "Feedback";
-"report.status.feedback.description" = "Please write your feedback below.";
-
-// Car
-"car.speed" = " mph";
-"car.power" = " kW";
-
-// Journey End
-"journey.confirm_end" = "Confirm End";
-"journey.select_payment_method" = "Select Payment Method";
-"journey.update_payment_method" = "Update Payment Method";
-"journey.confirm_and_pay" = "Confirm and Pay";
-
-// Alternative Summon
-"alternative.summon_an_alternative" = "Summon an alternative";
-"alternative.engaged" = "Your car is engaged";
-"alternative.late" = "Your car is running late!";
-"alternative.pickup_longer_than_journey" = "Pickup Longer than Journey";
-"alternative.alternative" = "Alternative";
-"alternative.no_alternative" = "No Alternative Available";
-"alternative.empty_description" = "If you continue this summon with the current car it will cost you ";
-"alternative.current_pickup" = "Current Pickup";
-"alternative.alternative_pickup" = "Alternative pickup";
-
-
-// Siri
-"siri.summon" = "Summon ";
-"siri.prebook" = "Prebook ";
-"siri.summon_subtitle" = "You can summon the car now!";
-"siri.prebook_subtitle" = "You can pre book the Supercar in advance.";
-"siri.closest_summon" = "Summon Supercar";
-"siri.closest_summon_subtitle" = "You can get the car now or pre book.";
+// Time
+"time.minute" = "minute";
+"time.minutes" = "minutes";
+"time.second" = "second";
+"time.seconds" = "seconds";
+"time.hour" = "hour";

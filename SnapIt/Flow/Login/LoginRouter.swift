@@ -31,10 +31,10 @@ extension LoginRouter: LoginRoutable {
     }
     
     func showResetPasswordScreen() {
-        // TODO: insert navigation
+        viewController?.view.window?.slide(to: ModulesFactory.shared.makeRestorePasswordModule().interface, direction: .right)
     }
 
     func showRejectScreen(status: LoginStatus) {
-        // TODO: insert navigation
+        viewController?.view.window?.slide(to: ModulesFactory.shared.makeLoginFailureModule().interface, direction: .right)
     }
 }

@@ -8,9 +8,8 @@
 
 import UIKit
 
-protocol LoginFailureRouterProtocol {
+protocol LoginFailureRouterProtocol: LogoutRouter {
     
-    func logout()
 }
 
 class LoginFailureRouter: NSObject, LoginFailureRouterProtocol {
@@ -19,9 +18,5 @@ class LoginFailureRouter: NSObject, LoginFailureRouterProtocol {
 
     init(with viewController: UIViewController) {
         self.viewController = viewController
-    }
-    
-    func logout() {
-        
     }
 }

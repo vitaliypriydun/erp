@@ -34,6 +34,9 @@ class SplashPresenter: NSObject {
 extension SplashPresenter: SplashOutput {
 
 	func viewDidAppear() {
+        if authorizationService.canAutologin {
+            
+        }
 		// TODO: Auto auth
 		router.showLogin()
 	}

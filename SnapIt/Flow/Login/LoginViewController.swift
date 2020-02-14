@@ -8,6 +8,7 @@
 
 import UIKit
 import SKTextInputsManager
+import ChameleonFramework
 
 class LoginViewController: UIViewController {
     
@@ -17,13 +18,21 @@ class LoginViewController: UIViewController {
     
     // MARK: - Private
     
+    @IBOutlet private weak var emailPostfixLabel: UILabel!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginLabel: UILabel!
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var googleButton: UIButton!
+    @IBOutlet private weak var orLabel: UILabel!
+    @IBOutlet private weak var emailView: UIView!
+    @IBOutlet private weak var passwordView: UIView!
     @IBOutlet private var textInputsManager: TextInputsManager!
+    
+    @IBOutlet private weak var loginActiveConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var loginLoadingConstraint: NSLayoutConstraint!
 
     // MARK: - Lifecycle
     
@@ -42,11 +51,17 @@ class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         presenter?.viewDidDisappear()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        loginButton.backgroundColor = .init(gradientStyle: .leftToRight, withFrame: loginButton.bounds,
+                                            andColors: GradientFactory.makeButtonGradient())
+    }
 
     // MARK: - Actions
     
     @IBAction private func loginAction(_ sender: Any) {
-        let login = emailTextField.text ?? ""
+        let login = (emailTextField.text ?? "") + Defaults.Strings.emailDomen
         let password = passwordTextField.text ?? ""
         view.endEditing(true)
         presenter?.viewTriggeredLoginEvent(with: login, password: password)
@@ -56,12 +71,32 @@ class LoginViewController: UIViewController {
         presenter?.viewTriggeredForgotPasswordEvent()
     }
 
+    @IBAction private func tapEmailAction(_ sender: Any) {
+        presenter?.viewTriggeredEmailEvent()
+    }
+    
+    @IBAction private func loginWithGoogleAction(_ sender: Any) {
+        presenter?.viewTriggeredGoogleEvent()
+    }
+    
+    @IBAction func hideButtonTouched(_ sender: Any) {
+        passwordTextField.isSecureTextEntry = false
+    }
+    
+    @IBAction func hideButtonReleased(_ sender: Any) {
+        passwordTextField.isSecureTextEntry = true
+    }
+    
     // MARK: - Private
     
     private func setupTexts() {
         emailTextField.placeholder = Localization.Login.email
         passwordTextField.placeholder = Localization.Login.password
         loginButton.setTitle(Localization.Buttons.logIn, for: .normal)
+        forgotPasswordButton.setAttributedTitle(AttributedTextFactory.makeForgotPasswordText(), for: .normal)
+        googleButton.setTitle(Localization.Login.google, for: .normal)
+        orLabel.text = Localization.Login.or
+        loginLabel.text = Localization.Login.title
     }
 }
 
@@ -70,53 +105,41 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginInterface {
     
     func setLoginButtonEnabled(_ enabled: Bool) {
-        let backgroundColor = UIColor.white //TODO: enabled ? Asset.Colors.black.color : Asset.Colors.white.color
-        let titleColor = UIColor.white //TODO: enabled ? Asset.Colors.white.color : Asset.Colors.grey155.color
-        let borderColor = UIColor.white //TODO: enabled ? UIColor.clear : Asset.Colors.grey155.color
-        loginButton.backgroundColor = backgroundColor
-        loginButton.setTitleColor(titleColor, for: .normal)
-        loginButton.borderColor = borderColor
         loginButton.isUserInteractionEnabled = enabled
     }
 
     func startLoadingAnimation() {
         activityIndicator.startAnimating()
         loginButton.isUserInteractionEnabled = false
+        loginButton.setTitle(String(), for: .normal)
+        UIView.animate({ [weak self] in
+            self?.loginActiveConstraint.priority = .defaultLow
+            self?.loginLoadingConstraint.priority = .defaultHigh
+            self?.view.layoutIfNeeded()
+        })
     }
 
     func endLoadingAnimation() {
         activityIndicator.stopAnimating()
-        loginButton.isUserInteractionEnabled = true
+        UIView.animate({ [weak self] in
+            self?.loginActiveConstraint.priority = .defaultHigh
+            self?.loginLoadingConstraint.priority = .defaultLow
+        }, completion: { [weak self] _ in
+            self?.loginButton.setTitle(Localization.Buttons.logIn, for: .normal)
+            self?.loginButton.isUserInteractionEnabled = true
+        })
     }
 
     func showEmailIsInvalid() {
-        emailTextField.shake()
+        emailView.shake()
     }
 
     func showCredentialsAreInvalid() {
-        emailTextField.shake()
-        passwordTextField.shake()
+        emailView.shake()
+        passwordView.shake()
     }
-}
-
-// MARK: - UITextFieldDelegate
     
-extension LoginViewController: UITextFieldDelegate {
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = textField.text,
-            let textRange = Range(range, in: text) {
-            let updatedText = text.replacingCharacters(in: textRange,
-                                                     with: string)
-
-            if textField == emailTextField {
-                presenter?.viewEnteredTexts(updatedText, passwordTextField.text)
-            }
-
-            if textField == passwordTextField {
-                presenter?.viewEnteredTexts(emailTextField.text, updatedText)
-            }
-        }
-        return true
+    func startEditingEmail() {
+        emailTextField.becomeFirstResponder()
     }
 }

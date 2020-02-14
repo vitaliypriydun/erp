@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - ObjectMapper (3.5.1)
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
@@ -8,10 +11,11 @@ PODS:
   - Starscream (4.0.0)
   - SwiftGen (6.1.0)
   - SwiftKeychainWrapper (3.4.0)
-  - SwiftLint (0.38.2)
+  - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Alamofire
+  - ChameleonFramework
   - ObjectMapper
   - SDWebImage
   - SKTextInputsManager
@@ -23,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ChameleonFramework
     - ObjectMapper
     - SDWebImage
     - SKTextInputsManager
@@ -33,14 +38,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SKTextInputsManager: a431d8011cd81492a582198e4fbeaf9ed57fd4e1
   Starscream: 04b26f02727e10a002e6b5d21b188ba0d049910b
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
-  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 354ce5214e2a2a89e293a93c1313a405e8eb5133
+PODFILE CHECKSUM: 3581615a5d70d990c94a3970726babd033f1aa77
 
 COCOAPODS: 1.8.4

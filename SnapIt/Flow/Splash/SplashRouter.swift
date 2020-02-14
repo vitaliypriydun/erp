@@ -11,6 +11,7 @@ import UIKit
 protocol SplashRouterProtocol: class {
     
 	func showLogin()
+    func proceedToApp()
 }
 
 class SplashRouter {
@@ -31,4 +32,8 @@ extension SplashRouter: SplashRouterProtocol {
 	func showLogin() {
 		viewController?.view.window?.fade(to: ModulesFactory.shared.makeLoginModule().interface)
 	}
+    
+    func proceedToApp() {
+        // TODO: Implement
+    }
 }

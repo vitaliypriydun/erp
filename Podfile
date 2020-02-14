@@ -1,5 +1,5 @@
 
-target 'SnapIt' do
+target 'ERP' do
 
   use_frameworks!
 
@@ -11,6 +11,9 @@ target 'SnapIt' do
     pod 'SwiftKeychainWrapper'
     pod 'SKTextInputsManager'
     pod 'SDWebImage'
+		
+		# Custom UI
+    pod 'ChameleonFramework'
 		
 		# MARK: - Utils
 		

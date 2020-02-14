@@ -19,22 +19,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="s7B-cl-aYF">
-                    <rect key="frame" x="20" y="-147" width="374" height="1200"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_background" translatesAutoresizingMaskIntoConstraints="NO" id="s7B-cl-aYF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" name="black_flat"/>
             <constraints>
-                <constraint firstItem="s7B-cl-aYF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fwJ-ZV-ZKT" secondAttribute="leading" constant="20" id="KsL-6A-Sar"/>
-                <constraint firstItem="s7B-cl-aYF" firstAttribute="centerX" secondItem="fwJ-ZV-ZKT" secondAttribute="centerX" id="ahl-0t-g9L"/>
-                <constraint firstItem="s7B-cl-aYF" firstAttribute="centerY" secondItem="fwJ-ZV-ZKT" secondAttribute="centerY" id="jLQ-lX-zUH"/>
+                <constraint firstItem="s7B-cl-aYF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F0R-rs-kBd"/>
+                <constraint firstItem="s7B-cl-aYF" firstAttribute="leading" secondItem="fwJ-ZV-ZKT" secondAttribute="leading" id="aGd-aG-2D5"/>
+                <constraint firstItem="fwJ-ZV-ZKT" firstAttribute="trailing" secondItem="s7B-cl-aYF" secondAttribute="trailing" id="hId-gT-T45"/>
+                <constraint firstAttribute="bottom" secondItem="s7B-cl-aYF" secondAttribute="bottom" id="hIv-qX-qOq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fwJ-ZV-ZKT"/>
             <point key="canvasLocation" x="139.13043478260872" y="153.34821428571428"/>
         </view>
     </objects>
     <resources>
-        <image name="splash_icon" width="600" height="600"/>
+        <image name="splash_background" width="332" height="656"/>
         <namedColor name="black_flat">
             <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

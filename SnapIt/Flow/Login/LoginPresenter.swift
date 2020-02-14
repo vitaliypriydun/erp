@@ -10,18 +10,19 @@ import UIKit
 
 protocol LoginInterface: class {
 
-    func setLoginButtonEnabled(_ enabled: Bool)
     func startLoadingAnimation()
     func endLoadingAnimation()
     func showEmailIsInvalid()
     func showCredentialsAreInvalid()
+    func startEditingEmail()
 }
 
 protocol LoginOutput: ViewLifecycle {
 
-    func viewEnteredTexts(_ email: String?, _ password: String?)
     func viewTriggeredLoginEvent(with email: String, password: String)
     func viewTriggeredForgotPasswordEvent()
+    func viewTriggeredEmailEvent()
+    func viewTriggeredGoogleEvent()
 }
 
 class LoginPresenter {
@@ -31,7 +32,7 @@ class LoginPresenter {
     private let authService: AuthorizationServiceProtocol
 
     init(with view: LoginInterface, _ router: LoginRoutable,
-        _ authService: AuthorizationServiceProtocol) {
+         _ authService: AuthorizationServiceProtocol) {
         self.view = view
         self.router = router
         self.authService = authService
@@ -47,16 +48,6 @@ class LoginPresenter {
 // MARK: - LoginOutput
     
 extension LoginPresenter: LoginOutput {
-
-    func viewDidLoad() {
-        view?.setLoginButtonEnabled(false)
-    }
-
-    func viewEnteredTexts(_ email: String?, _ password: String?) {
-        view?.setLoginButtonEnabled(false)
-        guard Email(email ?? "") != nil, Password(password ?? "") != nil else { return }
-        view?.setLoginButtonEnabled(true)
-    }
 
     func viewTriggeredLoginEvent(with email: String, password: String) {
         guard let email = Email(email) else {
@@ -75,5 +66,13 @@ extension LoginPresenter: LoginOutput {
 
     func viewTriggeredForgotPasswordEvent() {
         router.showResetPasswordScreen()
+    }
+    
+    func viewTriggeredEmailEvent() {
+        view?.startEditingEmail()
+    }
+    
+    func viewTriggeredGoogleEvent() {
+        // TODO: Login with google
     }
 }

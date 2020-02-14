@@ -64,25 +64,11 @@ extension LoginStatus {
 
     var title: String {
         let titles = Localization.Login.Failure.Titles.self
-        switch self {
-        case .rejected: return titles.rejected
-        case .frozen: return titles.frozen
-        case .pending: return titles.pending
-        case .cancelled: return titles.cancelled
-        case .revoked: return titles.cancelled
-        case .full: return ""
-        }
+        return titles.blocked
     }
 
     var message: String {
         let messages = Localization.Login.Failure.Messages.self
-        switch self {
-        case .rejected: return messages.rejected
-        case .frozen: return messages.frozen
-        case .pending: return messages.pending
-        case .cancelled: return messages.cancelled
-        case .revoked: return messages.cancelled
-        case .full: return ""
-        }
+        return messages.blocked
     }
 }

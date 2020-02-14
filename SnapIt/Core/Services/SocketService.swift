@@ -113,9 +113,9 @@ extension SocketService: WebSocketDelegate {
                 print(error)
             }
             handleDisconnect()
-        case .disconnected(_, _), .reconnectSuggested(_), .cancelled:
+        case .disconnected, .reconnectSuggested, .cancelled:
             handleDisconnect()
-        case .connected(_):
+        case .connected:
             connected = true
         default: break
         }

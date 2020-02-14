@@ -39,4 +39,9 @@ enum Defaults {
         static var disabled: CGFloat { return 0.2 }
         static var visible: CGFloat { return 1.0 }
     }
+
+    enum Strings {
+        
+        static let emailDomen = "@theappsolutions.com"
+    }
 }

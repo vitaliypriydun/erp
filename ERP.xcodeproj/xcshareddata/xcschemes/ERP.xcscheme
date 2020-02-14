@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5EAABDCD23D5CB4B00AA3720"
                BuildableName = "TAS ERP.app"
                BlueprintName = "ERP"
-               ReferencedContainer = "container:SnapIt.xcodeproj">
+               ReferencedContainer = "container:ERP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,15 +50,6 @@
             ReferencedContainer = "container:ERP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EAABDCD23D5CB4B00AA3720"
-            BuildableName = "TAS ERP.app"
-            BlueprintName = "ERP"
-            ReferencedContainer = "container:SnapIt.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,7 +64,7 @@
             BlueprintIdentifier = "5EAABDCD23D5CB4B00AA3720"
             BuildableName = "TAS ERP.app"
             BlueprintName = "ERP"
-            ReferencedContainer = "container:SnapIt.xcodeproj">
+            ReferencedContainer = "container:ERP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

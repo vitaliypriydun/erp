@@ -9,22 +9,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AvenirNextCyr-Bold.ttf">
+            <string>AvenirNextCyr-Bold</string>
+        </array>
+        <array key="AvenirNextCyr-Demi.ttf">
+            <string>AvenirNextCyr-Demi</string>
+        </array>
         <array key="AvenirNextCyr-Medium.ttf">
             <string>AvenirNextCyr-Medium</string>
-        </array>
-        <array key="AvenirNextCyr-Regular.ttf">
-            <string>AvenirNextCyr-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="TAS_ERP" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="7RI-3C-GEC" id="uWd-oU-ASd"/>
+                <outlet property="emailPostfixLabel" destination="xQb-GU-oXm" id="cb6-G7-0CH"/>
                 <outlet property="emailTextField" destination="HaI-LI-V5t" id="b5f-xC-Ouc"/>
+                <outlet property="emailView" destination="o0h-sp-Ug8" id="fTe-da-13N"/>
                 <outlet property="forgotPasswordButton" destination="K41-3D-okK" id="3ga-de-Pz0"/>
+                <outlet property="googleButton" destination="4rA-HG-CVJ" id="zT0-R8-67b"/>
+                <outlet property="loginActiveConstraint" destination="Dwl-eg-dcy" id="EyM-G2-vlo"/>
                 <outlet property="loginButton" destination="8HC-0M-pDr" id="4ix-7j-yTf"/>
                 <outlet property="loginLabel" destination="PdQ-2d-jue" id="LUj-dm-r8B"/>
+                <outlet property="loginLoadingConstraint" destination="NYH-GZ-epr" id="zLd-8S-8pY"/>
+                <outlet property="orLabel" destination="Z18-1Q-zXe" id="wiP-xN-ux2"/>
                 <outlet property="passwordTextField" destination="maP-qn-YTG" id="pS7-uf-5oJ"/>
+                <outlet property="passwordView" destination="kDs-RS-lrd" id="EyK-md-Ndt"/>
                 <outlet property="textInputsManager" destination="LNu-C6-Bxj" id="f9p-gK-JH2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,79 +44,51 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="ghQ-lA-FxQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ior-Fg-ir3">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-8t-fiV">
-                            <rect key="frame" x="20" y="80" width="374" height="453.5"/>
+                            <rect key="frame" x="20" y="80" width="374" height="508"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-2d-jue">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="49.5"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Bold" family="Avenir Next Cyr" pointSize="36"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" name="black"/>
+                                    <size key="shadowOffset" width="1" height="1"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFy-TR-3JP">
+                                    <rect key="frame" x="0.0" y="67" width="374" height="12"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="74x-m7-exV"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0h-sp-Ug8">
-                                    <rect key="frame" x="0.0" y="73.5" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="103" width="374" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C05-FU-chW">
                                             <rect key="frame" x="70.5" y="0.0" width="233.5" height="50"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-LI-V5t">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-LI-V5t">
                                                     <rect key="frame" x="0.0" y="2" width="60" height="48"/>
                                                     <color key="tintColor" name="black"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="a54-zO-ivT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go" textContentType="email"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                            <color key="value" name="black"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" name="grey155"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" name="grey151"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
-                                                            <color key="value" name="scarlet"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineErrorColor">
-                                                            <color key="value" name="scarlet"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="textErrorColor">
-                                                            <color key="value" name="black"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleErrorColor">
-                                                            <color key="value" name="scarlet"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" name="grey155"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                            <color key="value" name="black"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" name="grey151"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
-                                                            <real key="value" value="0.40000000000000002"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
-                                                            <real key="value" value="0.40000000000000002"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email Address"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Email"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
-                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="-1" id="fhc-Cv-yCT"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@theappsolutions.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-GU-oXm">
                                                     <rect key="frame" x="60" y="0.0" width="173.5" height="50"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
                                                     <color key="textColor" name="black"/>
                                                     <nil key="highlightedColor"/>
@@ -125,6 +107,7 @@
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="4vb-Xp-Pmm"/>
                                         <constraint firstItem="C05-FU-chW" firstAttribute="centerX" secondItem="o0h-sp-Ug8" secondAttribute="centerX" id="Y2n-Td-bfA"/>
@@ -136,85 +119,46 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" name="shadow"/>
-                                        </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                            <real key="value" value="5"/>
+                                            <real key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                            <real key="value" value="0.20000000000000001"/>
+                                            <real key="value" value="0.29999999999999999"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                            <size key="value" width="2" height="2"/>
+                                            <size key="value" width="2" height="5"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                             <color key="value" name="black"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="Gzl-Rf-FwM" appends="YES" id="XcV-pe-B9f"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDs-RS-lrd">
-                                    <rect key="frame" x="0.0" y="147.5" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="177" width="374" height="50"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maP-qn-YTG" customClass="FloatingTextField" customModule="TAS_ERP" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maP-qn-YTG">
                                             <rect key="frame" x="30" y="0.0" width="296" height="50"/>
                                             <color key="tintColor" name="black"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="18"/>
                                             <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                    <color key="value" name="black"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                    <color key="value" name="grey155"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                    <color key="value" name="grey151"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
-                                                    <color key="value" name="scarlet"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="lineErrorColor">
-                                                    <color key="value" name="scarlet"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textErrorColor">
-                                                    <color key="value" name="black"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleErrorColor">
-                                                    <color key="value" name="scarlet"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                    <color key="value" name="grey155"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                    <color key="value" name="black"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                    <color key="value" name="grey151"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
-                                                    <real key="value" value="0.40000000000000002"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
-                                                    <real key="value" value="0.40000000000000002"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Password"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="e1F-9Z-OSY"/>
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV7-KI-apB">
-                                            <rect key="frame" x="326" y="3" width="44" height="44"/>
+                                            <rect key="frame" x="326" y="-19" width="44" height="88"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="44" id="Shs-OW-UbI"/>
                                             </constraints>
                                             <state key="normal" image="button_hide"/>
+                                            <connections>
+                                                <action selector="hideButtonReleased:" destination="-1" eventType="touchUpInside" id="LL9-Lg-8dT"/>
+                                                <action selector="hideButtonReleased:" destination="-1" eventType="touchUpOutside" id="xJ8-44-2LF"/>
+                                                <action selector="hideButtonTouched:" destination="-1" eventType="touchDown" id="qRu-ER-6dv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -231,20 +175,14 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" name="shadow"/>
-                                        </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                            <real key="value" value="5"/>
+                                            <real key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                            <real key="value" value="0.20000000000000001"/>
+                                            <real key="value" value="0.29999999999999999"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                            <size key="value" width="2" height="2"/>
+                                            <size key="value" width="2" height="5"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                             <color key="value" name="black"/>
@@ -252,7 +190,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgD-0s-abN">
-                                    <rect key="frame" x="0.0" y="221.5" width="374" height="30"/>
+                                    <rect key="frame" x="0.0" y="251" width="374" height="30"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koZ-hx-dog">
                                             <rect key="frame" x="0.0" y="0.0" width="244" height="30"/>
@@ -283,31 +221,60 @@
                                         </button>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HC-0M-pDr">
-                                    <rect key="frame" x="0.0" y="275.5" width="374" height="50"/>
-                                    <color key="backgroundColor" red="0.94901960784313721" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rk6-lb-Sc1">
+                                    <rect key="frame" x="0.0" y="305" width="374" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="dmD-y3-Bkp"/>
+                                        <constraint firstAttribute="height" constant="1" id="qtC-LM-jzd"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                    <state key="normal" title="Log in">
-                                        <color key="titleColor" name="white"/>
-                                        <color key="titleShadowColor" name="black"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="xBO-mQ-hEJ"/>
-                                    </connections>
-                                </button>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z29-5a-gEt">
+                                    <rect key="frame" x="0.0" y="330" width="374" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HC-0M-pDr">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <color key="backgroundColor" red="0.94901960784313721" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" priority="200" constant="50" id="NYH-GZ-epr"/>
+                                                <constraint firstAttribute="height" constant="50" id="dmD-y3-Bkp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCyr-Demi" family="Avenir Next Cyr" pointSize="17"/>
+                                            <state key="normal" title="Log in">
+                                                <color key="titleColor" name="white"/>
+                                                <color key="titleShadowColor" name="black"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.40000000000000002"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="2" height="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" name="black"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="xBO-mQ-hEJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="8HC-0M-pDr" firstAttribute="centerX" secondItem="z29-5a-gEt" secondAttribute="centerX" id="Aw4-dp-j5f"/>
+                                        <constraint firstItem="8HC-0M-pDr" firstAttribute="width" secondItem="z29-5a-gEt" secondAttribute="width" priority="700" id="Dwl-eg-dcy"/>
+                                        <constraint firstAttribute="bottom" secondItem="8HC-0M-pDr" secondAttribute="bottom" id="YXR-Nm-WGF"/>
+                                        <constraint firstItem="8HC-0M-pDr" firstAttribute="top" secondItem="z29-5a-gEt" secondAttribute="top" id="l87-cI-eee"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-T1-DkT">
-                                    <rect key="frame" x="0.0" y="349.5" width="374" height="30"/>
+                                    <rect key="frame" x="0.0" y="404" width="374" height="30"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sbB-ne-Nw1">
                                             <rect key="frame" x="135" y="0.0" width="104" height="30"/>
@@ -333,13 +300,13 @@
                                                             <size key="value" width="1" height="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                            <real key="value" value="0.10000000000000001"/>
+                                                            <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z18-1Q-zXe">
                                                     <rect key="frame" x="42" y="4.5" width="20" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Regular" family="Avenir Next Cyr" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
                                                     <color key="textColor" name="white"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" name="black"/>
@@ -366,7 +333,7 @@
                                                             <size key="value" width="1" height="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                            <real key="value" value="0.10000000000000001"/>
+                                                            <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -382,36 +349,46 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rA-HG-CVJ">
-                                    <rect key="frame" x="0.0" y="403.5" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="458" width="374" height="50"/>
                                     <color key="backgroundColor" name="white"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Ttx-mh-ChM"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
                                     <state key="normal" title="Login with Google ">
                                         <color key="titleColor" name="black"/>
                                         <color key="titleShadowColor" name="black"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.29999999999999999"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="2" height="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" name="black"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="jhE-aV-5xw"/>
+                                        <action selector="loginWithGoogleAction:" destination="-1" eventType="touchUpInside" id="YVR-z6-bq5"/>
                                     </connections>
                                 </button>
                             </subviews>
                         </stackView>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7RI-3C-GEC">
-                            <rect key="frame" x="197" y="370.5" width="20" height="20"/>
+                            <rect key="frame" x="197" y="425" width="20" height="20"/>
                             <color key="color" name="white"/>
                         </activityIndicatorView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_google" translatesAutoresizingMaskIntoConstraints="NO" id="Yhx-yP-T2X">
-                            <rect key="frame" x="40" y="493.5" width="44" height="30"/>
+                            <rect key="frame" x="32" y="548" width="88" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="NAT-Ew-cPR"/>
                             </constraints>
@@ -419,9 +396,9 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="BDg-8t-fiV" firstAttribute="centerX" secondItem="Ior-Fg-ir3" secondAttribute="centerX" id="30I-RS-z9T"/>
-                        <constraint firstItem="7RI-3C-GEC" firstAttribute="centerX" secondItem="8HC-0M-pDr" secondAttribute="centerX" id="DIX-9g-mvE"/>
-                        <constraint firstItem="7RI-3C-GEC" firstAttribute="centerY" secondItem="8HC-0M-pDr" secondAttribute="centerY" id="HjE-Ib-8yV"/>
-                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="leading" secondItem="4rA-HG-CVJ" secondAttribute="leading" constant="20" id="PKq-OD-WTL"/>
+                        <constraint firstItem="7RI-3C-GEC" firstAttribute="centerY" secondItem="8HC-0M-pDr" secondAttribute="centerY" id="D7P-Id-n1G"/>
+                        <constraint firstItem="7RI-3C-GEC" firstAttribute="centerX" secondItem="8HC-0M-pDr" secondAttribute="centerX" id="Ljf-II-BKo"/>
+                        <constraint firstItem="Yhx-yP-T2X" firstAttribute="leading" secondItem="4rA-HG-CVJ" secondAttribute="leading" constant="12" id="PKq-OD-WTL"/>
                         <constraint firstAttribute="trailing" secondItem="BDg-8t-fiV" secondAttribute="trailing" constant="20" id="Whu-Yb-UaX"/>
                         <constraint firstItem="Yhx-yP-T2X" firstAttribute="centerY" secondItem="4rA-HG-CVJ" secondAttribute="centerY" id="kOi-3c-bMF"/>
                         <constraint firstItem="BDg-8t-fiV" firstAttribute="leading" secondItem="Ior-Fg-ir3" secondAttribute="leading" constant="20" id="psi-Jf-Kll"/>
@@ -433,9 +410,13 @@
             <color key="backgroundColor" name="black_flat"/>
             <constraints>
                 <constraint firstItem="Ior-Fg-ir3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6ht-Qs-GOF"/>
+                <constraint firstAttribute="trailing" secondItem="ghQ-lA-FxQ" secondAttribute="trailing" id="BMe-sL-Lc9"/>
+                <constraint firstItem="ghQ-lA-FxQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HZf-K8-RaD"/>
+                <constraint firstAttribute="bottom" secondItem="ghQ-lA-FxQ" secondAttribute="bottom" id="MX6-M4-mcL"/>
                 <constraint firstItem="Ior-Fg-ir3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fYt-o3-5o1"/>
                 <constraint firstItem="Ior-Fg-ir3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="lxH-2y-ewq"/>
                 <constraint firstItem="Ior-Fg-ir3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="org-vw-GbI"/>
+                <constraint firstItem="ghQ-lA-FxQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="puE-1H-6vX"/>
                 <constraint firstAttribute="bottom" secondItem="Ior-Fg-ir3" secondAttribute="bottom" id="ylB-S9-6aL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -449,10 +430,25 @@
                 <outlet property="containerView" destination="Ior-Fg-ir3" id="nFd-nh-IT5"/>
             </connections>
         </customObject>
+        <tapGestureRecognizer id="Gzl-Rf-FwM">
+            <connections>
+                <action selector="tapEmailAction:" destination="-1" id="nTf-qA-ydU"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="button_hide" width="44" height="44"/>
         <image name="icon_google" width="44" height="44"/>
+        <image name="login_background" width="332" height="656"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -461,18 +457,6 @@
         </namedColor>
         <namedColor name="black_flat">
             <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="grey151">
-            <color red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="grey155">
-            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="scarlet">
-            <color red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="shadow">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

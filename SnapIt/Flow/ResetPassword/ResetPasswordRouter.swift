@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ResetPasswordRouterProtocol: class {
+protocol ResetPasswordRouterProtocol: class, LogoutRouter {
     
 }
 
 class ResetPasswordRouter {
     
-    private weak var viewController: UIViewController?
+    internal weak var viewController: UIViewController?
     
     // MARK: - Lifecycle
     

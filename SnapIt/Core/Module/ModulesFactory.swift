@@ -27,7 +27,6 @@ class ModulesFactory {
                                         router: router,
                                         authorizationService: servicesFactory.makeAuthorizationService())
         viewController.presenter = presenter
-        
         return Module(presenter: presenter, interface: viewController)
     }
     
@@ -36,11 +35,24 @@ class ModulesFactory {
         let router = LoginRouter(with: viewController)
         let presenter = LoginPresenter(with: viewController, router, servicesFactory.makeAuthorizationService())
         viewController.presenter = presenter
-        
         return Module(presenter: presenter, interface: viewController)
     }
     
+    func makeRestorePasswordModule() -> Module<ResetPasswordPresenter, UIViewController> {
+        let viewController = ResetPasswordViewController()
+        let router = ResetPasswordRouter(with: viewController)
+        let presenter = ResetPasswordPresenter(withView: viewController, router: router)
+        viewController.presenter = presenter
+        return Module(presenter: presenter, interface: viewController)
+    }
+    
+    func makeLoginFailureModule() -> Module<LoginFailurePresenter, UIViewController> {
+        let viewController = LoginFailureViewController()
+        let router = LoginFailureRouter(with: viewController)
+        let presenter = LoginFailurePresenter(withView: viewController, router: router, status: .rejected)
+        viewController.presenter = presenter
+        return Module(presenter: presenter, interface: viewController)
+    }
     
     // MARK: - Private
-    
 }
