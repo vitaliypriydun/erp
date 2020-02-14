@@ -57,12 +57,12 @@ extension AppearAnimatableView {
     
     func animateOut(_ direction: SlideDirection) {
         var delay: TimeInterval = 0.0
-        animatableViews.forEach({ view in
+        animatableViews.reversed().forEach({ view in
             UIView.animate({
                 view.alpha = Defaults.ViewAlpha.hidden
                 view.transform = direction.dismissTransform
             }, with: delay)
-            delay += .delay
+            delay += .delay 
         })
     }
 }
@@ -81,7 +81,7 @@ extension AppearAnimatablePresenter where Self: ViewLifecycle {
     
     func viewWillDisappear() {
         guard let appearenceDirection = appearenceDirection else { return }
-        animatableView?.animateOut(appearenceDirection.opposite)
+        animatableView?.animateOut(appearenceDirection)
     }
 }
 

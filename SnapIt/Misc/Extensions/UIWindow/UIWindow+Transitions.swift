@@ -24,7 +24,7 @@ extension UIWindow {
     }
     
     func slide(to viewController: UIViewController, direction: SlideDirection) {
-        guard let snapshot = rootViewController?.view.snapshotView(afterScreenUpdates: true),
+        guard let snapshot = rootViewController?.view,
             let newView = viewController.view else {
                 return
         }
