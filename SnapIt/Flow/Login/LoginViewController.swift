@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var googleView: UIView!
     @IBOutlet private weak var loginActiveConstraint: NSLayoutConstraint!
     @IBOutlet private weak var loginLoadingConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var textInputsManager: TextInputsManager!
+    @IBOutlet private var textInputsManager: TextInputsManager!
 
     // MARK: - Lifecycle
     
