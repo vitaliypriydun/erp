@@ -14,6 +14,8 @@ target 'ERP' do
 		
 		# Custom UI
     pod 'ChameleonFramework'
+    pod 'TagListView'
+    pod 'DropDown'
 		
 		# MARK: - Utils
 		

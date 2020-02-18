@@ -1,8 +1,8 @@
 //
 //  AppRouter.swift
-//  PassportScan
+//  TAS_ERP
 //
-//  Created by Евгений on 3/21/19.
+//  Created by V on 3/21/19.
 //  Copyright © 2019 Евгений. All rights reserved.
 //
 
@@ -21,5 +21,19 @@ class AppRouter {
     func startApplication() {
         window?.makeKeyAndVisible()
 		window?.rootViewController = ModulesFactory.shared.makeSplashModule().interface
+    }
+    
+    // MARK: - Deep Links
+
+    
+    // MARK: - Private
+
+    // TODO: Implement
+}
+
+extension AppRouter: TopViewControllerProvider {
+    
+    var topViewController: UIViewController? {
+        return window?.rootViewController
     }
 }

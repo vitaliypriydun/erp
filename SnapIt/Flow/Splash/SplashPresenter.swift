@@ -35,9 +35,9 @@ extension SplashPresenter: SplashOutput {
 
 	func viewDidAppear() {
         if authorizationService.canAutologin {
-            
+            router.proceedToApp()
+        } else {
+            router.showLogin()
         }
-		// TODO: Auto auth
-		router.showLogin()
 	}
 }

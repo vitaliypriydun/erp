@@ -1,8 +1,8 @@
 //
 //  UIStackView.swift
-//  Hanabi
+//  TAS_ERP
 //
-//  Created by Sergey Kostyan on 11/8/18.
+//  Created by V Kostyan on 11/8/18.
 //  Copyright © 2018 Sergey. All rights reserved.
 //
 

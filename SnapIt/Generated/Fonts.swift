@@ -35,12 +35,21 @@ internal enum FontFamily {
     internal static let ultraLightItalic = FontConvertible(name: "AvenirNextCyr-UltraLightIt", family: "Avenir Next Cyr", path: "AvenirNextCyr-UltraLightIt.ttf")
     internal static let all: [FontConvertible] = [bold, boldItalic, demi, demiItalic, heavy, heavyItalic, italic, light, lightItalic, medium, mediumItalic, regular, thin, thinItalic, ultraLight, ultraLightItalic]
   }
+  internal enum SquareSansSerif7 {
+    internal static let regular = FontConvertible(name: "SquareSansSerif7", family: "Square Sans Serif 7", path: "square-sans-serif-7.regular.ttf")
+    internal static let all: [FontConvertible] = [regular]
+  }
+  internal enum TickingTimebombBB {
+    internal static let regular = FontConvertible(name: "TickingTimebombBB", family: "Ticking Timebomb BB", path: "TickingTimebombBB.ttf")
+    internal static let italic = FontConvertible(name: "TickingTimebombBB-Italic", family: "Ticking Timebomb BB", path: "TickingTimebombBB_ital.ttf")
+    internal static let all: [FontConvertible] = [regular, italic]
+  }
   internal enum TrendSans {
     internal static let one = FontConvertible(name: "TrendSansOne", family: "Trend Sans", path: "TrendSans-One.otf")
     internal static let oneItalic = FontConvertible(name: "TrendSansOne-Italic", family: "Trend Sans", path: "TrendSansOne-Italic.otf")
     internal static let all: [FontConvertible] = [one, oneItalic]
   }
-  internal static let allCustomFonts: [FontConvertible] = [AvenirNextCyr.all, TrendSans.all].flatMap { $0 }
+  internal static let allCustomFonts: [FontConvertible] = [AvenirNextCyr.all, SquareSansSerif7.all, TickingTimebombBB.all, TrendSans.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

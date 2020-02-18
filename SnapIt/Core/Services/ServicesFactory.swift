@@ -1,8 +1,8 @@
 //
 //  ServicesFactory.swift
-//  PassportScan
+//  TAS_ERP
 //
-//  Created by Евгений on 3/21/19.
+//  Created by V on 3/21/19.
 //  Copyright © 2019 Евгений. All rights reserved.
 //
 
@@ -25,11 +25,11 @@ class ServicesFactory {
                                     keychainService: makeKeychainService())
     }
     
+    func makeSocketService() -> SocketServiceProtocol {
+        return SocketService(keychainService: makeKeychainService())
+    }
+    
     // MARK: - Private
-	
-	private func makeSocketService() -> SocketServiceProtocol {
-		return SocketService(keychainService: makeKeychainService())
-	}
     
     private func makeNetworkService() -> Networking {
         return NetworkService(errorParser: makeAPIErrorParser())

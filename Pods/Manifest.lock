@@ -3,6 +3,7 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - DropDown (2.3.13)
   - ObjectMapper (3.5.1)
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
@@ -12,10 +13,12 @@ PODS:
   - SwiftGen (6.1.0)
   - SwiftKeychainWrapper (3.4.0)
   - SwiftLint (0.39.1)
+  - TagListView (1.4.0)
 
 DEPENDENCIES:
   - Alamofire
   - ChameleonFramework
+  - DropDown
   - ObjectMapper
   - SDWebImage
   - SKTextInputsManager
@@ -23,11 +26,13 @@ DEPENDENCIES:
   - SwiftGen
   - SwiftKeychainWrapper
   - SwiftLint
+  - TagListView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - ChameleonFramework
+    - DropDown
     - ObjectMapper
     - SDWebImage
     - SKTextInputsManager
@@ -35,10 +40,12 @@ SPEC REPOS:
     - SwiftGen
     - SwiftKeychainWrapper
     - SwiftLint
+    - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SKTextInputsManager: a431d8011cd81492a582198e4fbeaf9ed57fd4e1
@@ -46,7 +53,8 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
 
-PODFILE CHECKSUM: 3581615a5d70d990c94a3970726babd033f1aa77
+PODFILE CHECKSUM: f490bc1d5d1aadddac7827a368a1480f22639c7e
 
 COCOAPODS: 1.8.4

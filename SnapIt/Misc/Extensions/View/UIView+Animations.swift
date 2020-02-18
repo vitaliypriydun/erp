@@ -164,7 +164,7 @@ extension SlideDirection {
 
 // MARK: - Constants
 
-private enum Animations {
+enum Animations {
 
     static var duration: TimeInterval { return 0.5 }
     static var transitionDuration: TimeInterval { return 0.35 }

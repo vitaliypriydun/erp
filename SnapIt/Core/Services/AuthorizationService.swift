@@ -1,8 +1,8 @@
 //
 //  AuthorizationService.swift
-//  PassportScan
+//  TAS_ERP
 //
-//  Created by Евгений on 3/22/19.
+//  Created by V on 3/22/19.
 //  Copyright © 2019 Евгений. All rights reserved.
 //
 
@@ -54,5 +54,6 @@ extension AuthorizationService: UserAuthorizing {
 
 extension AuthorizationService: AuthorizationInfoStoring {
     
-    var canAutologin: Bool { return keychainService.fetchToken() != nil }
+    // TODO: Fix
+    var canAutologin: Bool { return  keychainService.fetchToken() != nil }
 }

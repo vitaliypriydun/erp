@@ -43,7 +43,9 @@ class LoginPresenter {
     // MARK: - Private
     
     private func login(with email: String, password: String) {
+        // validate response
         
+        router.proceedToApp()
     }
 }
 

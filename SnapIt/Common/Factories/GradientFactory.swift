@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class GradientFactory {
 
@@ -16,5 +17,13 @@ class GradientFactory {
             Asset.Colors.mainShadow.color,
             Asset.Colors.mainGradient.color
         ]
+    }
+    
+    static func makeMainGradient(for view: UIView, style: UIGradientStyle = .leftToRight) -> UIColor {
+        return makeGradient(for: view, with: makeButtonGradient())
+    }
+    
+    static func makeGradient(for view: UIView, with colors: [UIColor], style: UIGradientStyle = .leftToRight) -> UIColor {
+        return UIColor(gradientStyle: style, withFrame: view.bounds, andColors: colors)
     }
 }

@@ -1,8 +1,8 @@
 //
 //  KeychainService.swift
-//  PassportScan
+//  TAS_ERP
 //
-//  Created by Евгений on 3/22/19.
+//  Created by V on 3/22/19.
 //  Copyright © 2019 Евгений. All rights reserved.
 //
 
@@ -11,12 +11,17 @@ import SwiftKeychainWrapper
 
 protocol KeychainWriting {
     
+    // MARK: Homepage
+    func save(homepageOrder: [HomepageCell])
+    
+    // MARK: Authorization
     func save(token: Token)
     func removeToken()
 }
 
 protocol KeychainReading {
     
+    func fetchHomepageOrder() -> [HomepageCell]
     func fetchToken() -> Token?
 }
 
@@ -31,6 +36,10 @@ class KeychainService {
 
 extension KeychainService: KeychainWriting {
     
+    func save(homepageOrder: [HomepageCell]) {
+        keychain.set(homepageOrder.map({ $0.reuseIdentifier }).joined(separator: .separator), forKey: .homepage)
+    }
+    
     func save(token: Token) {
 		keychain.set(token, forKey: .token)
     }
@@ -44,6 +53,11 @@ extension KeychainService: KeychainWriting {
 
 extension KeychainService: KeychainReading {
     
+    func fetchHomepageOrder() -> [HomepageCell] {
+        guard let homepageOrder = keychain.string(forKey: .homepage) else { return HomepageCell.allCases }
+        return homepageOrder.components(separatedBy: String.separator).compactMap({ HomepageCell.cell(from: $0) })
+    }
+    
     func fetchToken() -> Token? {
 		return keychain.object(forKey: .token) as? Token
     }
@@ -54,4 +68,6 @@ extension KeychainService: KeychainReading {
 private extension String {
     
     static let token = "token_info"
+    static let homepage = "homepage"
+    static let separator = "#"
 }

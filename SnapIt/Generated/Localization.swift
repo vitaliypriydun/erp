@@ -15,25 +15,15 @@ internal enum Localization {
   internal static let applePay = Localization.tr("Localizable", "apple_pay")
 
   internal enum Account {
-    /// Damage Reporting
-    internal static let damageReporting = Localization.tr("Localizable", "account.damage_reporting")
-    /// Driven Member
-    internal static let drivenMember = Localization.tr("Localizable", "account.driven_member")
     /// Help
     internal static let help = Localization.tr("Localizable", "account.help")
-    /// Journeys
-    internal static let journeys = Localization.tr("Localizable", "account.journeys")
     /// My Account
     internal static let myAccount = Localization.tr("Localizable", "account.my_account")
     /// Notifications
     internal static let notifications = Localization.tr("Localizable", "account.notifications")
-    /// Previous Journeys
-    internal static let previousJourneys = Localization.tr("Localizable", "account.previous_journeys")
     /// Share with friends
     internal static let shareWithFriends = Localization.tr("Localizable", "account.share_with_friends")
-    /// Submitted Documents
-    internal static let submittedDocuments = Localization.tr("Localizable", "account.submitted_documents")
-    /// Account
+    /// Profile
     internal static let title = Localization.tr("Localizable", "account.title")
     internal enum Help {
       /// Call Operating Centre
@@ -44,8 +34,6 @@ internal enum Localization {
       internal static let contactUs = Localization.tr("Localizable", "account.help.contact_us")
       /// FAQ
       internal static let faq = Localization.tr("Localizable", "account.help.faq")
-      /// Lost Property
-      internal static let lostProperty = Localization.tr("Localizable", "account.help.lost_property")
       /// Terms and Privacy Policy
       internal static let terms = Localization.tr("Localizable", "account.help.terms")
     }
@@ -63,12 +51,16 @@ internal enum Localization {
   internal enum Buttons {
     /// Accept
     internal static let accept = Localization.tr("Localizable", "buttons.accept")
+    /// Add new
+    internal static let addNew = Localization.tr("Localizable", "buttons.add_new")
     /// Cancel
     internal static let cancel = Localization.tr("Localizable", "buttons.cancel")
     /// Confirm
     internal static let confirm = Localization.tr("Localizable", "buttons.confirm")
     /// Continue
     internal static let `continue` = Localization.tr("Localizable", "buttons.continue")
+    /// Create
+    internal static let crate = Localization.tr("Localizable", "buttons.crate")
     /// Details
     internal static let details = Localization.tr("Localizable", "buttons.details")
     /// Done
@@ -77,12 +69,16 @@ internal enum Localization {
     internal static let editProfile = Localization.tr("Localizable", "buttons.edit_profile")
     /// End
     internal static let end = Localization.tr("Localizable", "buttons.end")
+    /// Save Report
+    internal static let endAndSave = Localization.tr("Localizable", "buttons.end_and_save")
     /// Go to FAQs
     internal static let goToFaqs = Localization.tr("Localizable", "buttons.go_to_faqs")
     /// Go to Settings
     internal static let goToSettings = Localization.tr("Localizable", "buttons.go_to_settings")
     /// Help
     internal static let help = Localization.tr("Localizable", "buttons.help")
+    /// List
+    internal static let list = Localization.tr("Localizable", "buttons.list")
     /// Log in
     internal static let logIn = Localization.tr("Localizable", "buttons.log_in")
     /// Need Help?
@@ -91,6 +87,8 @@ internal enum Localization {
     internal static let no = Localization.tr("Localizable", "buttons.no")
     /// Ok
     internal static let ok = Localization.tr("Localizable", "buttons.ok")
+    /// Pause
+    internal static let pause = Localization.tr("Localizable", "buttons.pause")
     /// Report
     internal static let report = Localization.tr("Localizable", "buttons.report")
     /// Search
@@ -101,6 +99,8 @@ internal enum Localization {
     internal static let signOut = Localization.tr("Localizable", "buttons.sign_out")
     /// Start
     internal static let start = Localization.tr("Localizable", "buttons.start")
+    /// Timesheet
+    internal static let timesheet = Localization.tr("Localizable", "buttons.timesheet")
     /// Update
     internal static let update = Localization.tr("Localizable", "buttons.update")
     /// Updating
@@ -111,6 +111,29 @@ internal enum Localization {
     internal static let wait = Localization.tr("Localizable", "buttons.wait")
     /// Yes
     internal static let yes = Localization.tr("Localizable", "buttons.yes")
+  }
+
+  internal enum Home {
+    /// Company
+    internal static let company = Localization.tr("Localizable", "home.company")
+    /// Day off requests
+    internal static let dayOffRequest = Localization.tr("Localizable", "home.day_off_request")
+    /// Days exclusion
+    internal static let daysExclusion = Localization.tr("Localizable", "home.days_exclusion")
+    /// Finance
+    internal static let finance = Localization.tr("Localizable", "home.finance")
+    /// Project List
+    internal static let projectList = Localization.tr("Localizable", "home.project_list")
+    /// Projects
+    internal static let projects = Localization.tr("Localizable", "home.projects")
+    /// Salary Registry
+    internal static let salaryRegistry = Localization.tr("Localizable", "home.salary_registry")
+    /// Time Logging List
+    internal static let timeLoggingList = Localization.tr("Localizable", "home.time_logging_list")
+    /// Timer
+    internal static let timer = Localization.tr("Localizable", "home.timer")
+    /// Today, 
+    internal static let title = Localization.tr("Localizable", "home.title")
   }
 
   internal enum Login {
@@ -156,6 +179,11 @@ internal enum Localization {
     internal static let second = Localization.tr("Localizable", "time.second")
     /// seconds
     internal static let seconds = Localization.tr("Localizable", "time.seconds")
+  }
+
+  internal enum Timesheet {
+    /// Time Logging List
+    internal static let title = Localization.tr("Localizable", "timesheet.title")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

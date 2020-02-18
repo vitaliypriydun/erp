@@ -34,6 +34,6 @@ extension SplashRouter: SplashRouterProtocol {
 	}
     
     func proceedToApp() {
-        // TODO: Implement
+        viewController?.view.window?.fade(to: ModulesFactory.shared.makeTabbarModule().interface)
     }
 }

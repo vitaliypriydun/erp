@@ -12,6 +12,12 @@
 "buttons.yes" = "Yes";
 "buttons.no" = "No";
 
+// Timer buttons
+"buttons.end_and_save" = "Save Report";
+"buttons.add_new" = "Add New";
+"buttons.timesheet" = "Timesheet";
+"buttons.crate" = "Create";
+
 // Progress buttons
 "buttons.accept" = "Accept";
 "buttons.confirm" = "Confirm";
@@ -23,6 +29,7 @@
 "buttons.start" = "Start";
 "buttons.end" = "End";
 "buttons.wait" = "Wait";
+"buttons.pause" = "Pause";
 
 // Help buttons
 "buttons.help" = "Help";
@@ -40,6 +47,8 @@
 "buttons.details" = "Details";
 "buttons.view_all" = "View All";
 "buttons.report" = "Report";
+"buttons.add_new" = "Add new";
+"buttons.list" = "List";
 
 // Flow
 // Global
@@ -62,25 +71,32 @@
 "reset_password.title" = "Restore Password";
 "reset_password.subtitle" = "Enter your email used to access ERP";
 
+// Home
+"home.title" = "Today, ";
+"home.timer" = "Timer";
+"home.projects" = "Projects";
+"home.project_list" = "Project List";
+"home.time_logging_list" = "Time Logging List";
+"home.company" = "Company";
+"home.days_exclusion" = "Days exclusion";
+"home.day_off_request" = "Day off requests";
+"home.finance" = "Finance";
+"home.salary_registry" = "Salary Registry";
+
+// Time Logging List
+"timesheet.title" = "Time Logging List";
+
 // Account
-"account.title" = "Account";
-"account.previous_journeys" = "Previous Journeys";
-"account.damage_reporting" = "Damage Reporting";
+"account.title" = "Profile";
 "account.help" = "Help";
 "account.notifications" = "Notifications";
-"account.driven_member" = "Driven Member";
 
 "account.my_account" = "My Account";
-"account.journeys" = "Journeys";
-"account.submitted_documents" = "Submitted Documents";
-"account.notifications" = "Notifications";
-"account.help" = "Help";
 "account.share_with_friends" = "Share with friends";
 
 "account.help.faq" = "FAQ";
 "account.help.call" = "Call Operating Centre";
 "account.help.complaints" = "Complaints";
-"account.help.lost_property" = "Lost Property";
 "account.help.terms" = "Terms and Privacy Policy";
 "account.help.contact_us" = "Contact Us";
 

@@ -2,7 +2,7 @@
 //  SocketService.swift
 //  TAS_ERP
 //
-//  Created by Denis Romashov on 5/15/19.
+//  Created by V on 5/15/19.
 //  Copyright © 2019 tas. All rights reserved.
 //
 
@@ -70,7 +70,7 @@ class SocketService: NSObject, SocketServiceProtocol {
         }
 
         switch event {
-			// TODO: return concrete message
+			// TODO: return specific message
         default: return nil
         }
     }

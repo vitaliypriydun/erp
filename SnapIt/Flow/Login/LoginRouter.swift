@@ -27,7 +27,7 @@ class LoginRouter: NSObject {
 extension LoginRouter: LoginRoutable {
     
     func proceedToApp() {
-        // TODO: insert navigation to app
+        viewController?.view.window?.slide(to: ModulesFactory.shared.makeTabbarModule().interface, direction: .right)
     }
     
     func showResetPasswordScreen() {

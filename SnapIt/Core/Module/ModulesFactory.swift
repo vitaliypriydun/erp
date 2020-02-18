@@ -2,7 +2,7 @@
 //  ModulesFactory.swift
 //  Quickly
 //
-//  Created by Евгений on 2/13/19.
+//  Created by V on 2/13/19.
 //  Copyright © 2019 yevgeniy. All rights reserved.
 //
 
@@ -56,5 +56,52 @@ class ModulesFactory {
         return Module(presenter: presenter, interface: viewController)
     }
     
+    func makeTabbarModule() -> Module<TabbarPresenter, UITabBarController> {
+        let tabbarController = TabbarController()
+        let router = TabbarRouter(with: tabbarController)
+        
+        let presenter = TabbarPresenter(with: tabbarController,
+                                        router: router,
+                                        socketService: servicesFactory.makeSocketService())
+        tabbarController.presenter = presenter
+        tabbarController.viewControllers = [
+            makeNavigationController(with: makeHomeModule().interface),
+            makeNavigationController(with: makeTimesheetModule()),
+            makeNavigationController(with: makeProfileModule())
+        ]
+        return Module(presenter: presenter, interface: tabbarController)
+    }
+
     // MARK: - Private
+       
+    private func makeNavigationController(with viewController: UIViewController) -> UINavigationController {
+        let navigationController = NavigationController()
+        navigationController.viewControllers = [viewController]
+        return navigationController
+    }
+    
+    private func makeHomeModule() -> Module<HomePresenter, UIViewController> {
+        let viewController = HomeViewController()
+        let router = HomeRouter(with: viewController)
+        var presenter = HomePresenter(withView: viewController, router: router)
+        presenter.set(appearenceDirection: .bottom)
+        viewController.presenter = presenter
+        viewController.title = Localization.Home.title + Date().toDayString
+        viewController.tabBarItem = TabbarItemsFactory.makeHomeButton()
+        return Module(presenter: presenter, interface: viewController)
+    }
+    
+    private func makeTimesheetModule() -> UIViewController {
+        let vc = UIViewController()
+        vc.title = "IN PROGRESS"
+        vc.tabBarItem = TabbarItemsFactory.makeListButton()
+        return vc
+    }
+    
+    private func makeProfileModule() -> UIViewController {
+        let vc = UIViewController()
+        vc.title = "Profile"
+        vc.tabBarItem = TabbarItemsFactory.makeProfileButton()
+        return vc
+    }
 }

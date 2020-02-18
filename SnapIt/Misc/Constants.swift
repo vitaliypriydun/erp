@@ -44,4 +44,20 @@ enum Defaults {
         
         static let emailDomen = "@theappsolutions.com"
     }
+    
+    enum DeviceRatio {
+
+        static var width: CGFloat {
+            return UIScreen.main.bounds.size.width / 375
+        }
+
+        static var height: CGFloat {
+            return UIScreen.main.bounds.size.height / 667
+        }
+    }
+}
+
+extension Int {
+
+    static let secondsPerMinute: Int = 60
 }
