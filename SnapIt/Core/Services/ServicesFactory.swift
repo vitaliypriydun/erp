@@ -29,6 +29,10 @@ class ServicesFactory {
         return SocketService(keychainService: makeKeychainService())
     }
     
+    func makeHomepageService() -> HomepageServiceProtocol {
+        return HomepageService(keychainService: makeKeychainService())
+    }
+    
     // MARK: - Private
     
     private func makeNetworkService() -> Networking {

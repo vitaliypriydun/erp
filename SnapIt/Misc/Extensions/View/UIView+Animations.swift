@@ -17,7 +17,7 @@ extension UIView {
                        delay: 0.0,
                        usingSpringWithDamping: Animations.damping,
                        initialSpringVelocity: Animations.initialVelocity,
-                       options: [.curveEaseInOut],
+                       options: [.curveEaseInOut, .allowAnimatedContent],
                        animations: animations,
                        completion: completion)
     }
@@ -27,7 +27,7 @@ extension UIView {
                        delay: delay,
                        usingSpringWithDamping: Animations.damping,
                        initialSpringVelocity: Animations.initialVelocity,
-                       options: [.curveEaseInOut],
+                       options: [.curveEaseInOut, .allowAnimatedContent],
                        animations: animations,
                        completion: nil)
     }
@@ -96,7 +96,7 @@ extension UIView {
                        delay: delay,
                        usingSpringWithDamping: Animations.damping,
                        initialSpringVelocity: Animations.initialVelocity,
-                       options: [.curveEaseInOut, .transitionCrossDissolve],
+                       options: [.curveEaseInOut, .transitionCrossDissolve, .allowAnimatedContent],
                        animations: { [weak self] in
                         self?.transform = .identity
                         self?.alpha = Defaults.ViewAlpha.visible

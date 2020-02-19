@@ -49,8 +49,6 @@
 		5E9F6D2F23FAE9170062F3BE /* square-sans-serif-7.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F6D2E23FAE9170062F3BE /* square-sans-serif-7.regular.ttf */; };
 		5E9F6D3423FBF0650062F3BE /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6D3223FBF0650062F3BE /* TimerCell.swift */; };
 		5E9F6D3523FBF0650062F3BE /* TimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F6D3323FBF0650062F3BE /* TimerCell.xib */; };
-		5E9F6D3923FBF0930062F3BE /* ProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6D3723FBF0930062F3BE /* ProjectsCell.swift */; };
-		5E9F6D3A23FBF0930062F3BE /* ProjectsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F6D3823FBF0930062F3BE /* ProjectsCell.xib */; };
 		5EAABDD223D5CB4B00AA3720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAABDD123D5CB4B00AA3720 /* AppDelegate.swift */; };
 		5EAABDEB23D5D34500AA3720 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAABDEA23D5D34500AA3720 /* API.swift */; };
 		5EAABDED23D5D35B00AA3720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAABDEC23D5D35B00AA3720 /* Constants.swift */; };
@@ -83,6 +81,20 @@
 		5EE488A323FC21F0001170B1 /* TickingTimebombBB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488A123FC21F0001170B1 /* TickingTimebombBB.ttf */; };
 		5EE488A623FC3448001170B1 /* HomepageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488A523FC3448001170B1 /* HomepageService.swift */; };
 		5EE488A823FC40D0001170B1 /* HomepageDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488A723FC40D0001170B1 /* HomepageDatasource.swift */; };
+		5EE488B123FD91BD001170B1 /* FinancesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488AF23FD91BD001170B1 /* FinancesCell.swift */; };
+		5EE488B223FD91BD001170B1 /* FinancesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488B023FD91BD001170B1 /* FinancesCell.xib */; };
+		5EE488B523FD91E2001170B1 /* TimesheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488B323FD91E2001170B1 /* TimesheetCell.swift */; };
+		5EE488B623FD91E2001170B1 /* TimesheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488B423FD91E2001170B1 /* TimesheetCell.xib */; };
+		5EE488B923FD91F7001170B1 /* TodayStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488B723FD91F7001170B1 /* TodayStatisticsCell.swift */; };
+		5EE488BA23FD91F7001170B1 /* TodayStatisticsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488B823FD91F7001170B1 /* TodayStatisticsCell.xib */; };
+		5EE488BD23FD920B001170B1 /* MonthStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488BB23FD920B001170B1 /* MonthStatisticsCell.swift */; };
+		5EE488BE23FD920B001170B1 /* MonthStatisticsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488BC23FD920B001170B1 /* MonthStatisticsCell.xib */; };
+		5EE488C223FD9237001170B1 /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488C023FD9237001170B1 /* NotificationsCell.swift */; };
+		5EE488C323FD9237001170B1 /* NotificationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488C123FD9237001170B1 /* NotificationsCell.xib */; };
+		5EE488C723FD928D001170B1 /* DayoffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488C523FD928D001170B1 /* DayoffCell.swift */; };
+		5EE488C823FD928D001170B1 /* DayoffCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488C623FD928D001170B1 /* DayoffCell.xib */; };
+		5EE488CC23FD931D001170B1 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE488CA23FD931D001170B1 /* CalendarCell.swift */; };
+		5EE488CD23FD931D001170B1 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE488CB23FD931D001170B1 /* CalendarCell.xib */; };
 		5EEA7A9B23D8814900B4C73A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5923D8814800B4C73A /* NetworkService.swift */; };
 		5EEA7A9C23D8814900B4C73A /* AuthorizedNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5A23D8814800B4C73A /* AuthorizedNetworkingService.swift */; };
 		5EEA7A9D23D8814900B4C73A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5C23D8814800B4C73A /* APIError.swift */; };
@@ -173,8 +185,6 @@
 		5E9F6D2E23FAE9170062F3BE /* square-sans-serif-7.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "square-sans-serif-7.regular.ttf"; sourceTree = "<group>"; };
 		5E9F6D3223FBF0650062F3BE /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		5E9F6D3323FBF0650062F3BE /* TimerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCell.xib; sourceTree = "<group>"; };
-		5E9F6D3723FBF0930062F3BE /* ProjectsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCell.swift; sourceTree = "<group>"; };
-		5E9F6D3823FBF0930062F3BE /* ProjectsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsCell.xib; sourceTree = "<group>"; };
 		5EAABDCE23D5CB4B00AA3720 /* TAS ERP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAS ERP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAABDD123D5CB4B00AA3720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EAABDEA23D5D34500AA3720 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -208,6 +218,20 @@
 		5EE488A123FC21F0001170B1 /* TickingTimebombBB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TickingTimebombBB.ttf; sourceTree = "<group>"; };
 		5EE488A523FC3448001170B1 /* HomepageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageService.swift; sourceTree = "<group>"; };
 		5EE488A723FC40D0001170B1 /* HomepageDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageDatasource.swift; sourceTree = "<group>"; };
+		5EE488AF23FD91BD001170B1 /* FinancesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancesCell.swift; sourceTree = "<group>"; };
+		5EE488B023FD91BD001170B1 /* FinancesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinancesCell.xib; sourceTree = "<group>"; };
+		5EE488B323FD91E2001170B1 /* TimesheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetCell.swift; sourceTree = "<group>"; };
+		5EE488B423FD91E2001170B1 /* TimesheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimesheetCell.xib; sourceTree = "<group>"; };
+		5EE488B723FD91F7001170B1 /* TodayStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStatisticsCell.swift; sourceTree = "<group>"; };
+		5EE488B823FD91F7001170B1 /* TodayStatisticsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayStatisticsCell.xib; sourceTree = "<group>"; };
+		5EE488BB23FD920B001170B1 /* MonthStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthStatisticsCell.swift; sourceTree = "<group>"; };
+		5EE488BC23FD920B001170B1 /* MonthStatisticsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthStatisticsCell.xib; sourceTree = "<group>"; };
+		5EE488C023FD9237001170B1 /* NotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
+		5EE488C123FD9237001170B1 /* NotificationsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsCell.xib; sourceTree = "<group>"; };
+		5EE488C523FD928D001170B1 /* DayoffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayoffCell.swift; sourceTree = "<group>"; };
+		5EE488C623FD928D001170B1 /* DayoffCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayoffCell.xib; sourceTree = "<group>"; };
+		5EE488CA23FD931D001170B1 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		5EE488CB23FD931D001170B1 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		5EEA7A5923D8814800B4C73A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5EEA7A5A23D8814800B4C73A /* AuthorizedNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizedNetworkingService.swift; sourceTree = "<group>"; };
 		5EEA7A5C23D8814800B4C73A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -378,11 +402,13 @@
 		5E9F6D3023FBF0400062F3BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5EE488C923FD930B001170B1 /* CalendarCell */,
+				5EE488C423FD9270001170B1 /* DayoffCell */,
+				5EE488BF23FD9220001170B1 /* NotificationsCell */,
 				5E9F6D3E23FBF10E0062F3BE /* MonthStatisticsCell */,
 				5E9F6D3D23FBF1040062F3BE /* TodayStatisticsCell */,
 				5E9F6D3C23FBF0E30062F3BE /* TimeSheetsCell */,
 				5E9F6D3B23FBF0A60062F3BE /* FinancesCell */,
-				5E9F6D3623FBF0750062F3BE /* ProjectsCell */,
 				5E9F6D3123FBF0470062F3BE /* TimerCell */,
 			);
 			path = Cells;
@@ -397,18 +423,11 @@
 			path = TimerCell;
 			sourceTree = "<group>";
 		};
-		5E9F6D3623FBF0750062F3BE /* ProjectsCell */ = {
-			isa = PBXGroup;
-			children = (
-				5E9F6D3723FBF0930062F3BE /* ProjectsCell.swift */,
-				5E9F6D3823FBF0930062F3BE /* ProjectsCell.xib */,
-			);
-			path = ProjectsCell;
-			sourceTree = "<group>";
-		};
 		5E9F6D3B23FBF0A60062F3BE /* FinancesCell */ = {
 			isa = PBXGroup;
 			children = (
+				5EE488AF23FD91BD001170B1 /* FinancesCell.swift */,
+				5EE488B023FD91BD001170B1 /* FinancesCell.xib */,
 			);
 			path = FinancesCell;
 			sourceTree = "<group>";
@@ -416,6 +435,8 @@
 		5E9F6D3C23FBF0E30062F3BE /* TimeSheetsCell */ = {
 			isa = PBXGroup;
 			children = (
+				5EE488B323FD91E2001170B1 /* TimesheetCell.swift */,
+				5EE488B423FD91E2001170B1 /* TimesheetCell.xib */,
 			);
 			path = TimeSheetsCell;
 			sourceTree = "<group>";
@@ -423,6 +444,8 @@
 		5E9F6D3D23FBF1040062F3BE /* TodayStatisticsCell */ = {
 			isa = PBXGroup;
 			children = (
+				5EE488B723FD91F7001170B1 /* TodayStatisticsCell.swift */,
+				5EE488B823FD91F7001170B1 /* TodayStatisticsCell.xib */,
 			);
 			path = TodayStatisticsCell;
 			sourceTree = "<group>";
@@ -430,6 +453,8 @@
 		5E9F6D3E23FBF10E0062F3BE /* MonthStatisticsCell */ = {
 			isa = PBXGroup;
 			children = (
+				5EE488BB23FD920B001170B1 /* MonthStatisticsCell.swift */,
+				5EE488BC23FD920B001170B1 /* MonthStatisticsCell.xib */,
 			);
 			path = MonthStatisticsCell;
 			sourceTree = "<group>";
@@ -696,6 +721,33 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		5EE488BF23FD9220001170B1 /* NotificationsCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EE488C023FD9237001170B1 /* NotificationsCell.swift */,
+				5EE488C123FD9237001170B1 /* NotificationsCell.xib */,
+			);
+			path = NotificationsCell;
+			sourceTree = "<group>";
+		};
+		5EE488C423FD9270001170B1 /* DayoffCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EE488C523FD928D001170B1 /* DayoffCell.swift */,
+				5EE488C623FD928D001170B1 /* DayoffCell.xib */,
+			);
+			path = DayoffCell;
+			sourceTree = "<group>";
+		};
+		5EE488C923FD930B001170B1 /* CalendarCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EE488CA23FD931D001170B1 /* CalendarCell.swift */,
+				5EE488CB23FD931D001170B1 /* CalendarCell.xib */,
+			);
+			path = CalendarCell;
+			sourceTree = "<group>";
+		};
 		5EEA7A5723D8814800B4C73A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,20 +1012,26 @@
 				5E4DF82C23F43F8E001BA78F /* AvenirNextCyr-LightItalic.ttf in Resources */,
 				5E4DF82123F43F8E001BA78F /* LaunchScreen.storyboard in Resources */,
 				5E4DF83223F43F8E001BA78F /* AvenirNextCyr-DemiItalic.ttf in Resources */,
+				5EE488BA23FD91F7001170B1 /* TodayStatisticsCell.xib in Resources */,
 				5EE488A323FC21F0001170B1 /* TickingTimebombBB.ttf in Resources */,
+				5EE488CD23FD931D001170B1 /* CalendarCell.xib in Resources */,
 				5E4DF82A23F43F8E001BA78F /* AvenirNextCyr-Medium.ttf in Resources */,
-				5E9F6D3A23FBF0930062F3BE /* ProjectsCell.xib in Resources */,
+				5EE488B223FD91BD001170B1 /* FinancesCell.xib in Resources */,
 				5E9F6D2F23FAE9170062F3BE /* square-sans-serif-7.regular.ttf in Resources */,
 				5E4DF83323F43F8E001BA78F /* AvenirNextCyr-Demi.ttf in Resources */,
 				5E4DF82323F43F8E001BA78F /* TrendSans-One.otf in Resources */,
 				5E4DF81F23F43F8E001BA78F /* Localizable.strings in Resources */,
+				5EE488C323FD9237001170B1 /* NotificationsCell.xib in Resources */,
 				5E4DF82623F43F8E001BA78F /* AvenirNextCyr-BoldItalic.ttf in Resources */,
+				5EE488B623FD91E2001170B1 /* TimesheetCell.xib in Resources */,
 				5E4DF82923F43F8E001BA78F /* AvenirNextCyr-UltraLight.ttf in Resources */,
 				5E9F6D2D23FAD5AF0062F3BE /* HomeViewController.xib in Resources */,
 				5EEA7AE623D8A08300B4C73A /* LoginFailureViewController.xib in Resources */,
 				5E4DF82523F43F8E001BA78F /* AvenirNextCyr-Regular.ttf in Resources */,
 				5EEA7B0B23D9A5D000B4C73A /* ResetPasswordViewController.xib in Resources */,
+				5EE488BE23FD920B001170B1 /* MonthStatisticsCell.xib in Resources */,
 				5E4DF82823F43F8E001BA78F /* AvenirNextCyr-Light.ttf in Resources */,
+				5EE488C823FD928D001170B1 /* DayoffCell.xib in Resources */,
 				5E4DF82D23F43F8E001BA78F /* AvenirNextCyr-HeavyItalic.ttf in Resources */,
 				5E4DF82423F43F8E001BA78F /* AvenirNextCyr-ThinItalic.ttf in Resources */,
 				5E4DF82023F43F8E001BA78F /* Assets.xcassets in Resources */,
@@ -1071,6 +1129,8 @@
 				5E3F865323FABFC30044C587 /* CollectionViewLayoutsFactory.swift in Sources */,
 				5EAABE3123D60B8C00AA3720 /* Selectable.swift in Sources */,
 				5EAABE2423D609F200AA3720 /* UIView+IBDesignable.swift in Sources */,
+				5EE488BD23FD920B001170B1 /* MonthStatisticsCell.swift in Sources */,
+				5EE488B523FD91E2001170B1 /* TimesheetCell.swift in Sources */,
 				5EEA7AFF23D8A59900B4C73A /* Password.swift in Sources */,
 				5EEA7A9F23D8814900B4C73A /* APIResponseProtocol.swift in Sources */,
 				5EEA7AB323D8814900B4C73A /* RefreshTokenResponse.swift in Sources */,
@@ -1080,6 +1140,7 @@
 				5EEA7AC123D8814900B4C73A /* ServicesFactory.swift in Sources */,
 				5EEA7ABD23D8814900B4C73A /* AuthorizationStateRouter.swift in Sources */,
 				5EEA7AA023D8814900B4C73A /* APIErrorParsing.swift in Sources */,
+				5EE488C723FD928D001170B1 /* DayoffCell.swift in Sources */,
 				5E9F6D3423FBF0650062F3BE /* TimerCell.swift in Sources */,
 				5EAABE1F23D609F200AA3720 /* UIWindow+Transitions.swift in Sources */,
 				5EEA7AC023D8814900B4C73A /* UserDefaultsService.swift in Sources */,
@@ -1113,8 +1174,8 @@
 				5EAABE0923D6088D00AA3720 /* Fonts.swift in Sources */,
 				5E3F864923FAAE6B0044C587 /* TabbarPresenter.swift in Sources */,
 				5EAABE3423D60B8C00AA3720 /* Activatable.swift in Sources */,
-				5E9F6D3923FBF0930062F3BE /* ProjectsCell.swift in Sources */,
 				5EEA7AF323D8A1F500B4C73A /* ViewLifecycle.swift in Sources */,
+				5EE488CC23FD931D001170B1 /* CalendarCell.swift in Sources */,
 				5EAABE2923D609F200AA3720 /* ValidatedString.swift in Sources */,
 				5EAABDFC23D5E84000AA3720 /* SplashPresenter.swift in Sources */,
 				5EEA7ABA23D8814900B4C73A /* LoginResponse.swift in Sources */,
@@ -1135,6 +1196,7 @@
 				5E3F865623FABFC30044C587 /* BarButtonItemsFactory.swift in Sources */,
 				5EEA7ACE23D8816200B4C73A /* AppRouter.swift in Sources */,
 				5EEA7AB223D8814900B4C73A /* RefreshTokenRequest.swift in Sources */,
+				5EE488C223FD9237001170B1 /* NotificationsCell.swift in Sources */,
 				5E3F863A23F55D400044C587 /* AttributedTextFactory.swift in Sources */,
 				5EEA7AE723D8A08300B4C73A /* LoginFailureRouter.swift in Sources */,
 				5E3F864A23FAAE6B0044C587 /* TabbarRouter.swift in Sources */,
@@ -1146,11 +1208,13 @@
 				5EE488A623FC3448001170B1 /* HomepageService.swift in Sources */,
 				5EAABE2823D609F200AA3720 /* String+Localization.swift in Sources */,
 				5E9F6D2A23FAD5AF0062F3BE /* HomePresenter.swift in Sources */,
+				5EE488B923FD91F7001170B1 /* TodayStatisticsCell.swift in Sources */,
 				5EEA7AD623D8889D00B4C73A /* MappableTransforms.swift in Sources */,
 				5EEA7AA123D8814900B4C73A /* BackendError.swift in Sources */,
 				5EEA7B0923D9A5D000B4C73A /* ResetPasswordRouter.swift in Sources */,
 				5EEA7AE823D8A08300B4C73A /* LoginRouter.swift in Sources */,
 				5EEA7AE423D8A08300B4C73A /* LoginFailurePresenter.swift in Sources */,
+				5EE488B123FD91BD001170B1 /* FinancesCell.swift in Sources */,
 				5EEA7B0823D9A5D000B4C73A /* ResetPasswordPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

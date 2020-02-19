@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomepageDatasource<Cell: ReusableCell>: NSObject, UITableViewDataSource {
+class HomepageDatasource: NSObject, UITableViewDataSource {
 
-    private let cells: [HomepageCell]
+    private var cells: [HomepageCell] = []
     
     init(cellOrder: [HomepageCell]) {
         cells = cellOrder
@@ -24,5 +24,12 @@ class HomepageDatasource<Cell: ReusableCell>: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableView.dequeueReusableCell(withIdentifier: cells[indexPath.row].reuseIdentifier, for: indexPath)
+    }
+}
+
+extension HomepageDatasource {
+    
+    func set(cells: [HomepageCell]) {
+        self.cells = cells
     }
 }

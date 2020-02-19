@@ -1,14 +1,14 @@
 //
-//  ProjectsCell.swift
+//  CalendarCell.swift
 //  ERP
 //
-//  Created by Vitaliy Priydun on 18.02.2020.
+//  Created by Vitaliy Priydun on 19.02.2020.
 //  Copyright © 2020 TAS. All rights reserved.
 //
 
 import UIKit
 
-class ProjectsCell: UITableViewCell {
+class CalendarCell: UITableViewCell, ReusableCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

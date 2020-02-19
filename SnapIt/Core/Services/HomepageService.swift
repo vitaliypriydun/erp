@@ -29,7 +29,7 @@ class HomepageService {
 extension HomepageService: HomepageServiceProtocol {
     
     func getHomepageCellOrder() -> [HomepageCell] {
-        return []
+        return keychainService.fetchHomepageOrder()
     }
     
     func setHomepageOrder(_ cells: [HomepageCell]) {
@@ -40,7 +40,6 @@ extension HomepageService: HomepageServiceProtocol {
         return []
     }
 }
-
 
 // MARK: - Cells
 
@@ -60,12 +59,18 @@ extension HomepageCell {
     
     var reuseIdentifier: String {
         switch self {
-            case .timer: return TimerCell.reuseIdentifier
-            default: return ""
+        case .timer: return TimerCell.reuseIdentifier
+        case .notifications: return NotificationsCell.reuseIdentifier
+        case .timesheets: return TimesheetCell.reuseIdentifier
+        case .dayoffs: return DayoffCell.reuseIdentifier
+        case .calendar: return CalendarCell.reuseIdentifier
+        case .dayReport: return TodayStatisticsCell.reuseIdentifier
+        case .monthReport: return MonthStatisticsCell.reuseIdentifier
+        case .finances: return FinancesCell.reuseIdentifier
         }
     }
     
-    static func cell(from identifier: String) -> HomepageCell?  {
+    static func cell(from identifier: String) -> HomepageCell? {
         return HomepageCell.allCases.first(where: { $0.reuseIdentifier == identifier })
     }
 }
