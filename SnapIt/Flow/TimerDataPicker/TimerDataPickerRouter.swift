@@ -8,22 +8,22 @@
 
 import UIKit
 
-protocol TimerDataPickerRouterProtocol: class {
+protocol TimerDataPickerRouterProtocol: ClosableRouter {
     
 }
 
-class TimerDataPickerRouter {
+class TimerDataPickerRouter: NSObject {
     
-    private weak var viewController: UIViewController?
+    internal weak var viewController: UIViewController?
     
-    // MARK: - Lifecycle -
+    // MARK: - Lifecycle
     
     init(with viewController: UIViewController?) {
         self.viewController = viewController
     }
 }
 
-// MARK: - TimerDataPickerRouterProtocol -
+// MARK: - TimerDataPickerRouterProtocol
 
 extension TimerDataPickerRouter: TimerDataPickerRouterProtocol {
     

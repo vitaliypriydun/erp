@@ -8,19 +8,18 @@
 
 import UIKit
 
-typealias TimerFields = (projectId: String, workType: String)
-
 protocol TimerServiceProtocol {
     
-    func startTimer(projectId: String, workType: String)
+    func startTimer(with data: TimerData)
     func pauseTimer() 
     func endTimer()
-    func getTimerData() -> (date: Date, parameters: TimerFields)
+    func getTimer() -> TimerData?
 }
 
 class TimerService {
 
     private let keychainService: KeychainServiceProtocol
+    private var timer: TimerData?
 
     init(keychainService: KeychainServiceProtocol) {
         self.keychainService = keychainService
@@ -29,15 +28,23 @@ class TimerService {
 
 extension TimerService: TimerServiceProtocol {
     
-    func startTimer(projectId: String, workType: String) {
-        
+    func startTimer(with data: TimerData) {
+        keychainService.save(timer: data)
+        timer = data
+    }
+    
+    func pauseTimer() {
+        guard let timer = timer ?? getTimer() else { return }
+        timer.pause()
+        keychainService.save(timer: timer)
     }
     
     func endTimer() {
-        
+        keychainService.removeTimer()
+        timer = nil
     }
     
-    func getTimerData() -> (date: Date, parameters: TimerFields) {
-        
+    func getTimer() -> TimerData? {
+        return timer ?? keychainService.fetchTimer()
     }
 }

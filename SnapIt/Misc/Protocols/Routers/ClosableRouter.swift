@@ -26,3 +26,9 @@ extension ClosableRouter {
         }
     }
 }
+
+// MARK: - Presenter
+
+protocol ClosablePresenter {
+    func close()
+}

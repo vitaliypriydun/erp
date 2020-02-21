@@ -24,6 +24,12 @@ class HomeViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
+    // TODO: remove
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        present(ModulesFactory.shared.makeTimerDataInputPopup().interface, animated: true, completion: nil)
+    }
+    
     // MARK: - Private
 
     private func setupTexts() {

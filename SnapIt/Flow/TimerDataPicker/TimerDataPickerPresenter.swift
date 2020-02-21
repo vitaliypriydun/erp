@@ -12,14 +12,14 @@ protocol TimerDataPickerInterface: class {
     
 }
 
-protocol TimerDataPickerOutput {
+protocol TimerDataPickerOutput: ViewLifecycle, ClosablePresenter {
     
 }
 
 class TimerDataPickerPresenter: NSObject {
     
     private weak var view: TimerDataPickerInterface?
-    private let router: TimerDataPickerRouterProtocol
+    internal var router: TimerDataPickerRouterProtocol
     
     init(withView view: TimerDataPickerInterface, router: TimerDataPickerRouterProtocol) {
         self.view = view
@@ -27,8 +27,11 @@ class TimerDataPickerPresenter: NSObject {
     }
 }
 
-// MARK: - TimerDataPickerOutput -
+// MARK: - TimerDataPickerOutput
 
 extension TimerDataPickerPresenter: TimerDataPickerOutput {
-
+    
+    func close() {
+        router.close()
+    }
 }

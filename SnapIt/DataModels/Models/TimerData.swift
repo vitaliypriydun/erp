@@ -41,6 +41,14 @@ class TimerData: NSObject, NSCoding {
         coder.encode(workType.rawValue, forKey: .workType)
         coder.encode(startTime, forKey: .startDate)
     }
+    
+    // MARK: - Actions
+    
+    func pause() {
+        guard let startTime = startTime else { return }
+        previouslyLoggedTime += startTime.timeIntervalSinceNow
+        self.startTime = nil
+    }
 }
 
 // MARK: - Constants

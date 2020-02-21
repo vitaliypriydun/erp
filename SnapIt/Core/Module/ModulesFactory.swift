@@ -71,6 +71,16 @@ class ModulesFactory {
         ]
         return Module(presenter: presenter, interface: tabbarController)
     }
+    
+    func makeTimerDataInputPopup() -> Module<TimerDataPickerPresenter, UIViewController> {
+        let viewController = TimerDataPickerViewController()
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        let router = TimerDataPickerRouter(with: viewController)
+        let presenter = TimerDataPickerPresenter(withView: viewController, router: router)
+        viewController.presenter = presenter
+        return Module(presenter: presenter, interface: viewController)
+    }
 
     // MARK: - Private
        

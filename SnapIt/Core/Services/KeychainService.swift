@@ -13,6 +13,8 @@ protocol KeychainWriting {
     
     // MARK: Homepage
     func save(homepageOrder: [HomepageCell])
+    func save(timer: TimerData)
+    func removeTimer()
     
     // MARK: Authorization
     func save(token: Token)
@@ -21,6 +23,7 @@ protocol KeychainWriting {
 
 protocol KeychainReading {
     
+    func fetchTimer() -> TimerData?
     func fetchHomepageOrder() -> [HomepageCell]
     func fetchToken() -> Token?
 }
@@ -35,6 +38,14 @@ class KeychainService {
 // MARK: - KeychainWriting
 
 extension KeychainService: KeychainWriting {
+    
+    func save(timer: TimerData) {
+        keychain.set(timer, forKey: .timer)
+    }
+    
+    func removeTimer() {
+        keychain.removeObject(forKey: .timer)
+    }
     
     func save(homepageOrder: [HomepageCell]) {
         keychain.set(homepageOrder.map({ $0.reuseIdentifier }).joined(separator: .separator), forKey: .homepage)
@@ -53,6 +64,10 @@ extension KeychainService: KeychainWriting {
 
 extension KeychainService: KeychainReading {
     
+    func fetchTimer() -> TimerData? {
+        return keychain.object(forKey: .timer) as? TimerData
+    }
+    
     func fetchHomepageOrder() -> [HomepageCell] {
         guard let homepageOrder = keychain.string(forKey: .homepage) else { return HomepageCell.allCases }
         return homepageOrder.components(separatedBy: String.separator).compactMap({ HomepageCell.cell(from: $0) })
@@ -70,4 +85,5 @@ private extension String {
     static let token = "token_info"
     static let homepage = "homepage"
     static let separator = "#"
+    static let timer = "homepage_timer"
 }
