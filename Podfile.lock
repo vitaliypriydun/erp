@@ -14,6 +14,7 @@ PODS:
   - SwiftKeychainWrapper (3.4.0)
   - SwiftLint (0.39.1)
   - TagListView (1.4.0)
+  - UICircularProgressRing (6.5.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - SwiftKeychainWrapper
   - SwiftLint
   - TagListView
+  - UICircularProgressRing
 
 SPEC REPOS:
   trunk:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - SwiftKeychainWrapper
     - SwiftLint
     - TagListView
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
+  UICircularProgressRing: e6852e8f88e296cbbbe2720cccb55241acda6708
 
-PODFILE CHECKSUM: f490bc1d5d1aadddac7827a368a1480f22639c7e
+PODFILE CHECKSUM: 419aa22ccb8b57cad16539f68ee74100ed7c1f04
 
 COCOAPODS: 1.8.4

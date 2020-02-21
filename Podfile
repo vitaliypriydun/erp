@@ -16,6 +16,7 @@ target 'ERP' do
     pod 'ChameleonFramework'
     pod 'TagListView'
     pod 'DropDown'
+    pod 'UICircularProgressRing' 
 		
 		# MARK: - Utils
 		

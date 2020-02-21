@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
             let cellNib = UINib(nibName: $0, bundle: nil)
             tableView.register(cellNib, forCellReuseIdentifier: $0)
         })
+        tableView.dataSource = dataSource
     }
 }
 
