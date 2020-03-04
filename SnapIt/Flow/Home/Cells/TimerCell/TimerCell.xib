@@ -30,16 +30,16 @@
                         <rect key="frame" x="16" y="16" width="366" height="267"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-NV-eeJ">
-                                <rect key="frame" x="18" y="73" width="330" height="174"/>
+                                <rect key="frame" x="18" y="72" width="330" height="175"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-i0-6xe">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="123"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCyr-Demi" family="Avenir Next Cyr" pointSize="80"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkh-By-Q7h">
-                                        <rect key="frame" x="0.0" y="130" width="330" height="44"/>
+                                        <rect key="frame" x="0.0" y="131" width="330" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-jl-u6f">
                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="44"/>
@@ -82,10 +82,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPG-Mk-xBB">
-                                <rect key="frame" x="16" y="59" width="334" height="2"/>
+                                <rect key="frame" x="16" y="59" width="334" height="1"/>
                                 <color key="backgroundColor" name="main_shadow"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="72C-es-RGS"/>
+                                    <constraint firstAttribute="height" constant="1" id="72C-es-RGS"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH8-7V-qsd">

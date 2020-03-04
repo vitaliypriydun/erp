@@ -29,7 +29,6 @@ class TimerCellPresenter: HomepageCellPresenter {
     private weak var delegate: HomepageDelegate?
     private var timerService: TimerServiceProtocol
     private var timer: Timer?
-    private var timerData: TimerData? { return timerService.getTimer() }
     
     init(view: TimerCellInterface?, timerService: TimerServiceProtocol) {
         self.view = view
@@ -40,7 +39,11 @@ class TimerCellPresenter: HomepageCellPresenter {
     
     private func setupTimer() {
         timer = Timer(fire: Date(), interval: 30, repeats: true, block: { [weak self] _ in
-            self?.view?.setTimer(text: self?.timerData?.time ?? .emptyTimerText)
+            guard let timerData = self?.timerService.getTimer() else {
+                self?.setDefaultState()
+                return
+            }
+            self?.setTimerState(timerData: timerData)
         })
     }
     
@@ -49,6 +52,12 @@ class TimerCellPresenter: HomepageCellPresenter {
         view?.setStopButton(visible: false)
         view?.setTrackButton(visible: false)
     }
+    
+    private func setTimerState(timerData: TimerData) {
+        view?.setTimer(text: timerData.time)
+        view?.setTrackButton(visible: timerData.interval > 0)
+        view?.setStopButton(visible: timerData.isCounting)
+    }
 }
 
 // MARK: - TimerCellOutput
@@ -56,11 +65,11 @@ class TimerCellPresenter: HomepageCellPresenter {
 extension TimerCellPresenter: TimerCellOutput {
     
     func viewDidSetPresenter() {
-        guard let timer = timerService.getTimer() else {
+        guard let timerData = timerService.getTimer() else {
             setDefaultState()
             return
         }
-        view?.setTimer(text: timer.time)
+        setTimerState(timerData: timerData)
         setupTimer()
     }
     

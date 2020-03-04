@@ -22,6 +22,8 @@ class TimerDataPickerViewController: UIViewController {
     @IBOutlet private weak var orderTextField: UITextField!
     @IBOutlet private weak var productTextField: UITextField!
     @IBOutlet private weak var taskType: UITextField!
+    @IBOutlet private weak var separatorView: UIView!
+    @IBOutlet private weak var okButton: UIButton!
     
     // MARK: - Lifecycle
     
@@ -35,7 +37,13 @@ class TimerDataPickerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        contentView.animatePopUp()
+        presenter?.viewWillAppear()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        separatorView.backgroundColor = GradientFactory.makeMainGradient(for: separatorView)
+        okButton.backgroundColor = GradientFactory.makeMainGradient(for: okButton)
     }
     
     // MARK: - Actions
@@ -62,4 +70,13 @@ class TimerDataPickerViewController: UIViewController {
 
 extension TimerDataPickerViewController: TimerDataPickerInterface {
     
+    func startPopupAnimation() {
+        contentView.animatePopUp()
+    }
+    
+    func startClosingAnimation() {
+        contentView.animatePopOut(completion: { [weak self] (_) in
+            self?.presenter?.viewDidFinishClosingAnimation()
+        })
+    }
 }

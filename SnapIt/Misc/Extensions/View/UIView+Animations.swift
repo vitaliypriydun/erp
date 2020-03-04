@@ -81,7 +81,19 @@ extension UIView {
                        animations: { [weak self] in
                         self?.transform = .identity
                         self?.alpha = Defaults.ViewAlpha.visible
-        }, completion: nil)
+        }, completion: completion)
+    }
+    
+    func animatePopOut(after delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: Animations.duration,
+                       delay: delay,
+                       usingSpringWithDamping: Animations.damping,
+                       initialSpringVelocity: Animations.initialVelocity,
+                       options: [.curveEaseInOut],
+                       animations: { [weak self] in
+                        self?.transform = Animations.translateDownTransform
+                        self?.alpha = Defaults.ViewAlpha.hidden
+        }, completion: completion)
     }
 
     func slideIn(from: SlideDirection, after delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil) {

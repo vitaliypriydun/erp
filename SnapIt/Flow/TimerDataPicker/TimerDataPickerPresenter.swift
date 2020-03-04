@@ -10,10 +10,13 @@ import Foundation
 
 protocol TimerDataPickerInterface: class {
     
+    func startPopupAnimation()
+    func startClosingAnimation()
 }
 
 protocol TimerDataPickerOutput: ViewLifecycle, ClosablePresenter {
     
+    func viewDidFinishClosingAnimation()
 }
 
 class TimerDataPickerPresenter: NSObject {
@@ -31,7 +34,15 @@ class TimerDataPickerPresenter: NSObject {
 
 extension TimerDataPickerPresenter: TimerDataPickerOutput {
     
+    func viewWillAppear() {
+        view?.startPopupAnimation()
+    }
+    
     func close() {
+        view?.startClosingAnimation()
+    }
+    
+    func viewDidFinishClosingAnimation() {
         router.close()
     }
 }

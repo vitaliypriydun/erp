@@ -17,10 +17,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerDataPickerViewController">
             <connections>
                 <outlet property="contentView" destination="uB4-A6-hL1" id="Xif-2m-5Cd"/>
+                <outlet property="okButton" destination="2Kv-XB-ofS" id="q8E-Mt-DrO"/>
                 <outlet property="orderLabel" destination="sqL-zU-iB8" id="j0T-OR-b7x"/>
                 <outlet property="orderTextField" destination="6TO-oZ-UUv" id="zmw-C1-b0C"/>
                 <outlet property="productLabel" destination="czr-GJ-Q7S" id="62D-67-g8q"/>
                 <outlet property="productTextField" destination="NYO-T2-sE3" id="bGL-Yc-NQO"/>
+                <outlet property="separatorView" destination="GHp-je-jFm" id="zG7-uN-NPY"/>
                 <outlet property="taskType" destination="n8x-ee-B8z" id="XBw-gG-IOD"/>
                 <outlet property="taskTypeLabel" destination="Ewd-5A-70Q" id="uFZ-dW-ecW"/>
                 <outlet property="titleLabel" destination="k4Q-wT-rYU" id="GO1-sb-h3L"/>
@@ -43,7 +45,7 @@
                     <blurEffect style="regular"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uB4-A6-hL1">
-                    <rect key="frame" x="0.0" y="468" width="414" height="428"/>
+                    <rect key="frame" x="0.0" y="408" width="414" height="488"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMM-5x-wob">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -85,11 +87,11 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-Xw-7OK">
-                            <rect key="frame" x="0.0" y="58" width="414" height="370"/>
+                            <rect key="frame" x="0.0" y="58" width="414" height="430"/>
                             <color key="backgroundColor" name="white"/>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cfN-xV-EVf">
-                            <rect key="frame" x="15" y="62" width="384" height="320"/>
+                            <rect key="frame" x="15" y="62" width="384" height="380"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ox-5Q-WH0">
                                     <rect key="frame" x="0.0" y="0.0" width="384" height="80"/>
@@ -309,6 +311,46 @@
                                         <constraint firstAttribute="trailing" secondItem="5He-xa-4Yv" secondAttribute="trailing" constant="20" symbolic="YES" id="umx-n0-CNy"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-3R-SXy">
+                                    <rect key="frame" x="0.0" y="320" width="384" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kv-XB-ofS">
+                                            <rect key="frame" x="0.0" y="5" width="384" height="50"/>
+                                            <color key="backgroundColor" name="main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="73s-Hi-iEh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
+                                            <state key="normal" title="Start">
+                                                <color key="titleColor" name="white"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="1" height="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" name="main_gradient"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="2Kv-XB-ofS" secondAttribute="trailing" id="8X0-Bp-8gI"/>
+                                        <constraint firstItem="2Kv-XB-ofS" firstAttribute="centerY" secondItem="hvG-3R-SXy" secondAttribute="centerY" id="TRg-jf-hwr"/>
+                                        <constraint firstAttribute="height" constant="60" id="Zco-vR-JrN"/>
+                                        <constraint firstItem="2Kv-XB-ofS" firstAttribute="leading" secondItem="hvG-3R-SXy" secondAttribute="leading" id="a3g-dp-MlQ"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -364,8 +406,8 @@
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="black">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="main">
+            <color red="0.79607843137254897" green="0.17647058823529413" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="main_gradient">
             <color red="0.93725490196078431" green="0.27843137254901962" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,6 +12,6 @@ extension TimeInterval {
 
     var toTimeString: String {
         let time = NSInteger(self)
-        return String(format: "%0.2dh %0.2dm", (time / 3600), (time / 60) % 60)
+        return String(format: "%0.2dh %0.2dm %0.2ds", (time / 3600), (time / 60) % 60, (time) % 60)
     }
 }

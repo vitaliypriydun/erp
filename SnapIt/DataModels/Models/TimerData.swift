@@ -17,6 +17,11 @@ class TimerData: NSObject, NSCoding {
     
     var isCounting: Bool { return startTime != nil }
     
+    var interval: TimeInterval {
+        guard let startTime = startTime else { return previouslyLoggedTime }
+        return (startTime.timeIntervalSinceNow + previouslyLoggedTime)
+    }
+    
     private(set) var projectId: String
     private(set) var orderId: String
     private(set) var workType: WorkType
