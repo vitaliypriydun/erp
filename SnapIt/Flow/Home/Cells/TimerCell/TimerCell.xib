@@ -15,9 +15,6 @@
         <array key="AvenirNextCyr-Medium.ttf">
             <string>AvenirNextCyr-Medium</string>
         </array>
-        <array key="square-sans-serif-7.regular.ttf">
-            <string>SquareSansSerif7</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -35,9 +32,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-NV-eeJ">
                                 <rect key="frame" x="18" y="73" width="330" height="174"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-i0-6xe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-i0-6xe">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="122"/>
-                                        <fontDescription key="fontDescription" name="SquareSansSerif7" family="Square Sans Serif 7" pointSize="80"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCyr-Demi" family="Avenir Next Cyr" pointSize="80"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -59,6 +56,9 @@
                                                         <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="trackAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1b8-Bh-GKX"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right_white" translatesAutoresizingMaskIntoConstraints="NO" id="o8A-xf-JKG">
                                                 <rect key="frame" x="295" y="14.5" width="20" height="15"/>
@@ -89,16 +89,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH8-7V-qsd">
-                                <rect key="frame" x="44" y="1" width="175" height="58"/>
+                                <rect key="frame" x="44" y="1" width="181" height="58"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCyr-Medium" family="Avenir Next Cyr" pointSize="17"/>
                                 <color key="textColor" name="black_flat"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k0E-Yo-dyB">
-                                <rect key="frame" x="227" y="12" width="124" height="36"/>
+                                <rect key="frame" x="233" y="15" width="118" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T0-2T-njI">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0T0-2T-njI" secondAttribute="height" multiplier="1:1" id="tF1-z3-dsT"/>
@@ -106,9 +106,12 @@
                                         <state key="normal" image="stop">
                                             <color key="titleColor" name="white"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wn5-a5-zac"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ew-ju-iXq">
-                                        <rect key="frame" x="44" y="0.0" width="80" height="36"/>
+                                        <rect key="frame" x="38" y="0.0" width="80" height="30"/>
                                         <color key="backgroundColor" name="main_shadow"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="EoF-KM-S8m"/>
@@ -119,7 +122,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="18"/>
+                                                <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" name="main"/>
@@ -128,10 +131,13 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mn3-Rh-UvW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="AwF-iR-ZeX"/>
+                                    <constraint firstAttribute="height" constant="30" id="AwF-iR-ZeX"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="rHT-nd-b2N">

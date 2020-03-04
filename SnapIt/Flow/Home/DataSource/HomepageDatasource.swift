@@ -9,8 +9,11 @@
 import UIKit
 
 class HomepageDatasource: NSObject, UITableViewDataSource {
+    
+    weak var delegate: HomepageDelegate?
 
     private var cells: [HomepageCell] = []
+    private var presenters: [HomepageCellPresenter] = []
     
     init(cellOrder: [HomepageCell]) {
         cells = cellOrder
@@ -23,7 +26,13 @@ class HomepageDatasource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: cells[indexPath.row].reuseIdentifier, for: indexPath)
+        let cellType = cells[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath)
+        if let presenter = cellType.makePresenter(with: cell) {
+            presenter.set(delegate: delegate)
+            presenters.append(presenter)
+        }
+        return cell
     }
 }
 
@@ -31,5 +40,6 @@ extension HomepageDatasource {
     
     func set(cells: [HomepageCell]) {
         self.cells = cells
+        self.presenters = []
     }
 }

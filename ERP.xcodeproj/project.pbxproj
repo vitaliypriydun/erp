@@ -41,6 +41,7 @@
 		5E4DF83123F43F8E001BA78F /* AvenirNextCyr-UltraLightIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF81A23F43F8E001BA78F /* AvenirNextCyr-UltraLightIt.ttf */; };
 		5E4DF83223F43F8E001BA78F /* AvenirNextCyr-DemiItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF81B23F43F8E001BA78F /* AvenirNextCyr-DemiItalic.ttf */; };
 		5E4DF83323F43F8E001BA78F /* AvenirNextCyr-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DF81C23F43F8E001BA78F /* AvenirNextCyr-Demi.ttf */; };
+		5E54DF8124091D770049C7EB /* HomepageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DF8024091D770049C7EB /* HomepageDelegate.swift */; };
 		5E9F6D2423FACB890062F3BE /* AppRouterManageble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6D2323FACB890062F3BE /* AppRouterManageble.swift */; };
 		5E9F6D2A23FAD5AF0062F3BE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6D2623FAD5AF0062F3BE /* HomePresenter.swift */; };
 		5E9F6D2B23FAD5AF0062F3BE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6D2723FAD5AF0062F3BE /* HomeRouter.swift */; };
@@ -103,6 +104,8 @@
 		5EE77EBD23FFEBE1001C6406 /* TimerDataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE77EB923FFEBE1001C6406 /* TimerDataPickerViewController.swift */; };
 		5EE77EBE23FFEBE1001C6406 /* TimerDataPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE77EBA23FFEBE1001C6406 /* TimerDataPickerViewController.xib */; };
 		5EE77EC023FFF116001C6406 /* WorkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE77EBF23FFF116001C6406 /* WorkType.swift */; };
+		5EE77ED9240416E6001C6406 /* TimerCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE77ED8240416E6001C6406 /* TimerCellPresenter.swift */; };
+		5EE77EDB2404170E001C6406 /* HomepageCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE77EDA2404170E001C6406 /* HomepageCellPresenter.swift */; };
 		5EEA7A9B23D8814900B4C73A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5923D8814800B4C73A /* NetworkService.swift */; };
 		5EEA7A9C23D8814900B4C73A /* AuthorizedNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5A23D8814800B4C73A /* AuthorizedNetworkingService.swift */; };
 		5EEA7A9D23D8814900B4C73A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA7A5C23D8814800B4C73A /* APIError.swift */; };
@@ -185,6 +188,7 @@
 		5E4DF81B23F43F8E001BA78F /* AvenirNextCyr-DemiItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-DemiItalic.ttf"; sourceTree = "<group>"; };
 		5E4DF81C23F43F8E001BA78F /* AvenirNextCyr-Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Demi.ttf"; sourceTree = "<group>"; };
 		5E5094F823F442F7002456B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E54DF8024091D770049C7EB /* HomepageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageDelegate.swift; sourceTree = "<group>"; };
 		5E9F6D2323FACB890062F3BE /* AppRouterManageble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterManageble.swift; sourceTree = "<group>"; };
 		5E9F6D2623FAD5AF0062F3BE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5E9F6D2723FAD5AF0062F3BE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 		5EE77EB923FFEBE1001C6406 /* TimerDataPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDataPickerViewController.swift; sourceTree = "<group>"; };
 		5EE77EBA23FFEBE1001C6406 /* TimerDataPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerDataPickerViewController.xib; sourceTree = "<group>"; };
 		5EE77EBF23FFF116001C6406 /* WorkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkType.swift; sourceTree = "<group>"; };
+		5EE77ED8240416E6001C6406 /* TimerCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCellPresenter.swift; sourceTree = "<group>"; };
+		5EE77EDA2404170E001C6406 /* HomepageCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCellPresenter.swift; sourceTree = "<group>"; };
 		5EEA7A5923D8814800B4C73A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5EEA7A5A23D8814800B4C73A /* AuthorizedNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizedNetworkingService.swift; sourceTree = "<group>"; };
 		5EEA7A5C23D8814800B4C73A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -433,6 +439,7 @@
 		5E9F6D3123FBF0470062F3BE /* TimerCell */ = {
 			isa = PBXGroup;
 			children = (
+				5EE77ED8240416E6001C6406 /* TimerCellPresenter.swift */,
 				5E9F6D3223FBF0650062F3BE /* TimerCell.swift */,
 				5E9F6D3323FBF0650062F3BE /* TimerCell.xib */,
 			);
@@ -737,6 +744,8 @@
 			isa = PBXGroup;
 			children = (
 				5EE488A723FC40D0001170B1 /* HomepageDatasource.swift */,
+				5EE77EDA2404170E001C6406 /* HomepageCellPresenter.swift */,
+				5E54DF8024091D770049C7EB /* HomepageDelegate.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1160,6 +1169,7 @@
 			files = (
 				5EAABDFD23D5E84000AA3720 /* SplashRouter.swift in Sources */,
 				5E3F865323FABFC30044C587 /* CollectionViewLayoutsFactory.swift in Sources */,
+				5E54DF8124091D770049C7EB /* HomepageDelegate.swift in Sources */,
 				5EAABE3123D60B8C00AA3720 /* Selectable.swift in Sources */,
 				5EAABE2423D609F200AA3720 /* UIView+IBDesignable.swift in Sources */,
 				5EE488BD23FD920B001170B1 /* MonthStatisticsCell.swift in Sources */,
@@ -1176,6 +1186,7 @@
 				5EEA7AA023D8814900B4C73A /* APIErrorParsing.swift in Sources */,
 				5EE488C723FD928D001170B1 /* DayoffCell.swift in Sources */,
 				5E9F6D3423FBF0650062F3BE /* TimerCell.swift in Sources */,
+				5EE77ED9240416E6001C6406 /* TimerCellPresenter.swift in Sources */,
 				5EAABE1F23D609F200AA3720 /* UIWindow+Transitions.swift in Sources */,
 				5EEA7AC023D8814900B4C73A /* UserDefaultsService.swift in Sources */,
 				5EAABDEB23D5D34500AA3720 /* API.swift in Sources */,
@@ -1225,6 +1236,7 @@
 				5EE77EB523FFE026001C6406 /* TimeInterval+DateString.swift in Sources */,
 				5EAABE2623D609F200AA3720 /* UIBarButtonItem+Initialization.swift in Sources */,
 				5EEA7AEA23D8A08300B4C73A /* LoginPresenter.swift in Sources */,
+				5EE77EDB2404170E001C6406 /* HomepageCellPresenter.swift in Sources */,
 				5EEA7AC823D8814900B4C73A /* AuthorizationService.swift in Sources */,
 				5E9F6D2423FACB890062F3BE /* AppRouterManageble.swift in Sources */,
 				5EE77EBB23FFEBE1001C6406 /* TimerDataPickerPresenter.swift in Sources */,

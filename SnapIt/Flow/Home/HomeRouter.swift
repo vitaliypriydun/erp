@@ -10,6 +10,8 @@ import UIKit
 
 protocol HomeRouterProtocol: class {
     
+    func showTimerInputPopup()
+    func showTrackViewController(_ timer: TimerData?)
 }
 
 class HomeRouter {
@@ -26,5 +28,12 @@ class HomeRouter {
 // MARK: - HomeRouterProtocol
 
 extension HomeRouter: HomeRouterProtocol {
+   
+    func showTimerInputPopup() {
+        viewController?.present(ModulesFactory.shared.makeTimerDataInputPopup().interface, animated: true, completion: nil)
+    }
     
+    func showTrackViewController(_ timer: TimerData? = nil) {
+        
+    }
 }

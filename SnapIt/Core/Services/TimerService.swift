@@ -10,7 +10,8 @@ import UIKit
 
 protocol TimerServiceProtocol {
     
-    func startTimer(with data: TimerData)
+    func createTimer(with data: TimerData)
+    func startTimer()
     func pauseTimer() 
     func endTimer()
     func getTimer() -> TimerData?
@@ -28,9 +29,14 @@ class TimerService {
 
 extension TimerService: TimerServiceProtocol {
     
-    func startTimer(with data: TimerData) {
-        keychainService.save(timer: data)
+    func createTimer(with data: TimerData) {
         timer = data
+        startTimer()
+        keychainService.save(timer: data)
+    }
+    
+    func startTimer() {
+        timer?.play()
     }
     
     func pauseTimer() {

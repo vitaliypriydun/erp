@@ -15,6 +15,8 @@ class TimerData: NSObject, NSCoding {
         return (startTime.timeIntervalSinceNow + previouslyLoggedTime).toTimeString
     }
     
+    var isCounting: Bool { return startTime != nil }
+    
     private(set) var projectId: String
     private(set) var orderId: String
     private(set) var workType: WorkType
@@ -48,6 +50,11 @@ class TimerData: NSObject, NSCoding {
         guard let startTime = startTime else { return }
         previouslyLoggedTime += startTime.timeIntervalSinceNow
         self.startTime = nil
+    }
+    
+    func play() {
+        pause()
+        startTime = Date()
     }
 }
 

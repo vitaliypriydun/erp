@@ -23,13 +23,7 @@ class HomeViewController: UIViewController {
         setupTexts()
         presenter?.viewDidLoad()
     }
-    
-    // TODO: remove
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        present(ModulesFactory.shared.makeTimerDataInputPopup().interface, animated: true, completion: nil)
-    }
-    
+
     // MARK: - Private
 
     private func setupTexts() {
@@ -39,9 +33,9 @@ class HomeViewController: UIViewController {
     
     private func performInitialSetup() {
         HomepageCell.allCases.compactMap({ $0.reuseIdentifier}).forEach({
-            let cellNib = UINib(nibName: $0, bundle: nil)
-            tableView.register(cellNib, forCellReuseIdentifier: $0)
+            tableView.register(UINib(nibName: $0, bundle: nil), forCellReuseIdentifier: $0)
         })
+        dataSource.delegate = presenter
         tableView.dataSource = dataSource
     }
 }
@@ -51,6 +45,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeInterface {
     
     var animatableViews: [UIView] { return [] }
+    
+    func set(editing: Bool) {
+        tableView.setEditing(editing, animated: true)
+    }
     
     func set(cells: [HomepageCell]) {
         dataSource.set(cells: cells)

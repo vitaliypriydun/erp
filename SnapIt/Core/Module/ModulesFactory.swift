@@ -94,7 +94,8 @@ class ModulesFactory {
         let viewController = HomeViewController()
         let router = HomeRouter(with: viewController)
         let homepageService = servicesFactory.makeHomepageService()
-        var presenter = HomePresenter(withView: viewController, router: router, homepageService: homepageService)
+        let timerService = servicesFactory.makeTimerService()
+        var presenter = HomePresenter(withView: viewController, router: router, homepageService: homepageService, timerService: timerService)
         presenter.set(appearenceDirection: .bottom)
         viewController.presenter = presenter
         viewController.title = Localization.Home.title + Date().toDayString

@@ -15,17 +15,19 @@ protocol ViewLifecycle {
     func viewDidAppear()
     func viewWillDisappear()
     func viewDidDisappear()
+    
+    func viewDidAwakeFromNib()
+    
+    func viewDidSetPresenter()
 }
 
 extension ViewLifecycle {
 
     func viewDidLoad() { }
-
     func viewWillAppear() { }
-
     func viewDidAppear() { }
-
     func viewWillDisappear() { }
-
     func viewDidDisappear() { }
+    func viewDidAwakeFromNib() { }
+    func viewDidSetPresenter() { }
 }

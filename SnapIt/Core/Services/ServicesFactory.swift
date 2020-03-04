@@ -33,6 +33,10 @@ class ServicesFactory {
         return HomepageService(keychainService: makeKeychainService())
     }
     
+    func makeTimerService() -> TimerServiceProtocol {
+        return TimerService(keychainService: makeKeychainService())
+    }
+    
     // MARK: - Private
     
     private func makeNetworkService() -> Networking {

@@ -74,3 +74,22 @@ extension HomepageCell {
         return HomepageCell.allCases.first(where: { $0.reuseIdentifier == identifier })
     }
 }
+
+// MARK: - PresenterFactory
+
+extension HomepageCell {
+    
+    func makePresenter(with view: UITableViewCell) -> HomepageCellPresenter? {
+        let serviceFactory = ServicesFactory.shared
+        var presenter: HomepageCellPresenter?
+        switch self {
+        case .timer:
+            guard let view = view as? TimerCell else { break }
+            let cellPresenter = TimerCellPresenter(view: view, timerService: serviceFactory.makeTimerService())
+            view.presenter = cellPresenter
+            presenter = cellPresenter
+        default: presenter = nil
+        }
+        return presenter
+    }
+}
